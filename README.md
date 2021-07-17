@@ -6,7 +6,7 @@ This Repo is for the Project 1 Interactive Web Application. The main purpose of 
 <thead>
 <tr>
 <th><a href="https://github.com/Qabas-al-ani">Qabas Al Ani</a></th>
-<th><a href="https://github.com/lbladma">TaoufikA</a></th>
+<th><a href="https://github.com/lbladma">Taoufik Ami</a></th>
 <th><a href="https://github.com/hlbrown">Hannah Brown</a></th>
 <th><a href="https://github.com/DionneNoellaBarretto">Dionne Noella Barretto</a></th>
 </tr>

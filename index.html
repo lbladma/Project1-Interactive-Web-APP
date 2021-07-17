@@ -1,79 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <nav>
-      <div class="nav-wrapper  blue darken-4">
-        <a href="#" class="brand-logo center">Project name goes here</a>
-      </div>
-    </nav>
 
-    <div class="row">
-      <div id="sidebar" class="col s3  light-blue lighten-3">
-        <div class="card-panel teal lighten-2 center-align">I'm Feeling...</div>
-    
-        <div
-          class="card-panel hoverable center-align light-blue lighten-5 col s6"
-        >
-          Happy
-        </div>
-        <div
-          class="card-panel hoverable center-align light-blue lighten-1 col s6"
-        >
-          Sad
-        </div>
-        <div
-          class="card-panel hoverable center-align  brown col s6"
-        >
-          Fit
-        </div>
-        <div
-          class="card-panel hoverable center-align deep-orange accent-4 col s6"
-        >
-          Sexy
-        </div>
-        <div class="card-panel hoverable center-align green accent-2 col s6">
-          Anxious
-        </div>
-        <div class="card-panel hoverable center-align cyan accent-3 col s6">
-          Thirsty
-        </div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> I'm Feeling ____ App </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Materialize is another way for styling pages as a replacement to bootstrap - Taufiq is working on this portion -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
 
-      <div id="main-content" class="col s9">
-        <div class="row">
-          <div class="col s12 ">
-            <div class="card-panel teal center-align">
-              <span class="white-text ">Dynamic map will go here
-              </span>
-            </div>
-          </div>
-        </div>
-        <div id="cards-div" class="center-align"><h1>Cards Dynamically will show up here</h1></div>
-      </div>
-   
+</head>
+
+<body>
+  <!-- Application name up top -->
+  <nav>
+  <div class="emoji teal lighten-2"></div> 
+    <!-- <div class="nav-wrapper blue darken-4 top"> commenting this out
+       <a href="#" class="brand-logo center"></a>I'm Feeling "____"</a> -- instead of this adding an animated button as the title 
+      this may need to be converted into a dynamic element for scalability using jquery/javascript later as the number of feelings we add increases 
+title allows for text to appear when feeling is hovered upon, emjoi's ref https://www.w3schools.com/charsets/ref_emoji_smileys.asp  -->
+        <ul>
+          <li title="Select a feeling" style="font-weight: bold; color: black">I'm Feeling: </li>
+          <li title="Happy">😀</li>
+          <li title="Fit"> 💪 </li>
+          <li title="Thirsty"> 🥂</li>
+          <li title="Anxious"> 😟</li>
+          <li title="Sexy"> 👙</li>
+          <li title="Sad"> 😞</li>
+          <!-- https://emojiguide.org/white-question-mark  -->
+          <li title="I don't know how I'm feeling"> ❔ </li>
+        </ul>
+  </nav>
+
+  <!-- A quick link to the feeling's section to the left -->
+  <div class="row">
+    <div id="sidebar" class="col s3  light-blue lighten-3">
+      <!-- this may need to be converted into a dynamic element for scalability using jquery/javascript later as the number of feelings we add increases -->
+      <div class="card-panel teal lighten-2 center-align"> I'm Feeling...</div>
+      <div class="card-panel hoverable center-align light-blue lighten-5 col s6"> Happy </div>
+      <div class="card-panel hoverable center-align light-blue lighten-1 col s6"> Sad </div>
+      <div class="card-panel hoverable center-align  brown col s6"> Fit </div>
+      <div class="card-panel hoverable center-align deep-orange accent-4 col s6"> Sexy </div>
+      <div class="card-panel hoverable center-align green accent-2 col s6"> Anxious </div>
+      <div class="card-panel hoverable center-align cyan accent-3 col s6"> Thirsty </div>
+      <!-- using the full slot as opposed to half a slot -->
+      <div class="card-panel hoverable center-align lemon chiffon accent- col s12"> I don't know how I feel </div>
+      <!-- an area for searching for a feeling - for the logic here when clicked we may need to append to google search api url
+      <form method="get" action="/search/" class="search-form">
+        <label>
+        <button class="search-form__button" aria-label="search"> Search for a Feeling 🔍</button>
+        <input type="search" name="q" placeholder="Search a Feeling">
+        </label>
+      </form>
+      <div class="search-examples">
+         the href's for the feeling need to be updated once we have our api's 
+        <p><strong>eg</strong>&nbsp;<a href="#">happy</a> <a href="#">sad</a> </p>
+      </div> -->
     </div>
 
-    <footer class="page-footer  blue darken-4">
-    <a href="www.facebook.com"><img src="./images/facebook.png"></a>
-    <a href="www.twitter.com"><img src="./images/twitter.png"></a>
-     
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./js/script.js"></script>
-  </body>
+    <div id="main-content" class="col s9">
+      <div class="row">
+        <div class="col s12 ">
+          <div class="card-panel teal center-align">
+            <span class="white-text ">Dynamic map will go here
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="cards-div" class="center-align">
+        <h1>Cards Dynamically will show up here</h1>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="page-footer blue darken-4">
+    <!-- Pulling the images for the footer section from online Hannah's working on this section -->
+    <a href="www.facebook.com"><img
+        src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.facebookbrand.com%2Ffacebookapp%2Fassets%2Ff-logo&psig=AOvVaw0vHPOWVT4-gO_wpxX6OWrX&ust=1626621197280000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjkj6my6vECFQAAAAAdAAAAABAJ"></a>
+    <a href="www.twitter.com"><img
+        src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vectorstock.com%2Froyalty-free-vector%2Ftwitter-social-media-icon-design-template-vector-22339994&psig=AOvVaw1lysLxDL22uRXIVK9PClQs&ust=1626621468479000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKjsyqiz6vECFQAAAAAdAAAAABAD"></a>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./js/script.js"></script>
+
+
+</body>
 </html>

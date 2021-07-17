@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,30 +10,24 @@
   <!-- Materialize is another way for styling pages as a replacement to bootstrap - Taufiq is working on this portion -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
-
 </head>
 
 <body>
   <nav>
     <div class="nav-wrapper  blue darken-4">
-      <a href="#" class="brand-logo left">I'm Feeling... App
-
-      </a>
+      <a href="#" class="brand-logo left">I'm Feeling... App</a>
       <a href="./contributors.html" class="right nav-link">Contributors</a>
       <a href="./index.html" class="right nav-link">Home</a>
-
     </div>
   </nav>
 
   <!-- Application name up top -->
   <nav>
-
     <div class="emoji teal lighten-2"></div>
     <!-- <div class="nav-wrapper blue darken-4 top"> commenting this out
        <a href="#" class="brand-logo center"></a>I'm Feeling "____"</a> -- instead of this adding an animated button as the title 
       this may need to be converted into a dynamic element for scalability using jquery/javascript later as the number of feelings we add increases 
 title allows for text to appear when feeling is hovered upon, emjoi's ref https://www.w3schools.com/charsets/ref_emoji_smileys.asp  -->
-
     <ul>
       <li title="Select a feeling" style="font-weight: bold; color: black">I'm Feeling: </li>
       <li title="Happy">😀</li>
@@ -46,7 +39,6 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
       <!-- https://emojiguide.org/white-question-mark  -->
       <li title="I don't know how I'm feeling"> ❔ </li>
     </ul>
-
   </nav>
 
   <!-- A quick link to the feeling's section to the left -->
@@ -75,19 +67,19 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
       <div class="card-panel hoverable center-align cyan accent-3 col s6" title="🥂"> Thirsty </div>
       <!-- using the full slot as opposed to half a slot -->
       <div class="card-panel hoverable center-align lemon chiffon accent- col s12"> I don't know how I feel </div>
-      <!-- an area for searching for a feeling - for the logic here when clicked we may need to append to google search api url
-      <form method="get" action="/search/" class="search-form">
-        <label>
-        <button class="search-form__button" aria-label="search"> Search for a Feeling 🔍</button>
-        <input type="search" name="q" placeholder="Search a Feeling">
-        </label>
-      </form>
-      <div class="search-examples">
-         the href's for the feeling need to be updated once we have our api's 
-        <p><strong>eg</strong>&nbsp;<a href="#">happy</a> <a href="#">sad</a> </p>
-      </div> -->
+          <!-- an area for searching for a feeling - for the logic here when clicked we may need to append to google search api url
+          <form method="get" action="/search/" class="search-form">
+            <label>
+            <button class="search-form__button" aria-label="search"> Search for a Feeling 🔍</button>
+            <input type="search" name="q" placeholder="Search a Feeling">
+            </label>
+          </form>
+          <div class="search-examples">
+            the href's for the feeling need to be updated once we have our api's 
+            <p><strong>eg</strong>&nbsp;<a href="#">happy</a> <a href="#">sad</a> </p>
+          </div> -->
     </div>
-
+<!-- area for map display -->
     <div id="main-content" class="col s9">
       <div class="row">
         <div class="col s12 ">
@@ -97,6 +89,8 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
           </div>
         </div>
       </div>
+
+      <!-- area for api results in modal form -->
       <div id="cards-div" class="center-align">
         <h1>Cards Dynamically will show up here</h1>
       </div>
@@ -104,6 +98,7 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
   </div>
 </body>
 
+<!-- footer section -->
 <footer class="page-footer  blue darken-4">
   <div class="container">
     <div class="row">

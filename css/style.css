@@ -11,3 +11,47 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+/* styling for the "I'm feeling button" on the left */
+* {
+    box-sizing: border-box;
+  }
+  button {
+    margin-left: 40px;
+    display: block;
+    padding: 0;
+    appearance: none;
+    overflow: hidden;
+    height: 50px;
+    border: rgb(16, 129, 110) 2px dashed;
+    background-color: #F2F2F2;
+    /* gradient shading for the I'm feeling button */
+    background-image: -webkit-linear-gradient(top, rgb(12, 151, 151), rgb(123, 248, 248));
+    background-image: -moz-linear-gradient(top, rgb(12, 151, 151), rgb(123, 248, 248));
+  }
+  button:hover {
+    border-color: #4908e2;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px;
+    background-image: -webkit-linear-gradient(top, #8df1ec, #62d5f1);
+    background-image: -moz-linear-gradient(top, #f8f8f8, #F1F1F1);
+  }
+  button:active {
+    box-shadow: rgba(87, 86, 86, 0.2) 0px 0px 1px;
+    outline: none !important;
+  }
+  button:focus {
+    outline: 1px #08c solid;
+  }
+  button ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    -webkit-transition: margin-top 0.45s ease-in-out;
+    -moz-transition: margin-top 0.45s ease-in-out;
+    transition: margin-top 0.45s ease-in-out;
+  }
+  button ul li {
+    display: block;
+    height: 55px;
+    padding: 1em;
+  }

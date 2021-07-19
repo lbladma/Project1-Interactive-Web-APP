@@ -1,13 +1,93 @@
-#nav-link{
+#sidebar, #main-content {
+    height: 100vh;
+    }
+
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+    height: 100%;
+  }
+  
+.map-container {
+    height: 400px;
+}
+
+.nav-link{
     padding-right:1em;  
 }
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  .button {
+    margin-left: 40px;
+    display: block;
+    padding: 0;
+    appearance: none;
+    overflow: hidden;
+    height: 50px;
+    border: rgb(6, 153, 128) 2px dashed;
+    background-color: #F2F2F2;
+    /* gradient shading for the I'm feeling button */
+    background-image: -webkit-linear-gradient(top, rgb(24, 151, 151), rgb(123, 248, 248));
+    background-image: -moz-linear-gradient(top, rgb(27, 151, 151), rgb(123, 248, 248));
+  }
+  button:hover {
+    border-color: #4908e2;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px;
+    background-image: -webkit-linear-gradient(top, #8df1ec, #51cfee);
+    background-image: -moz-linear-gradient(top, #8df1ec, #51cfee);
+  }
+  button:active {
+    box-shadow: rgba(131, 129, 129, 0.2) 0px 0px 1px;
+    outline: none !important;
+  }
+  button:focus {
+    outline: 1px rgb(84, 178, 224) solid;
+  }
+  button ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    -webkit-transition: margin-top 0.45s ease-in-out;
+    -moz-transition: margin-top 0.45s ease-in-out;
+    transition: margin-top 0.45s ease-in-out;
+  }
+  button ul li {
+    display: block;
+    height: 55px;
+    padding: 1em;
+  }
+
+  /* emailUS button effects and settings 
+  .emailUS{
+	display: block;
+	margin: auto;
+	width: 120px;
+	height: 30px;
+	background: url("./images/emailme.gif");!important
 }
 
-main {
-    flex: 1 0 auto;
+.emailUS:hover
+{
+	background-position: 0 40px;
+}
+*/
+
+/* styling for various screen sizes*/
+
+@media (max-width: 690px) {
+  .btn {
+    font-size: 1rem;
+    margin: 16px 0px 0px 0px;
+    padding: 10px 15px;
+  }
+}
+  @media (max-width: 500px) {
+    .btn {
+      font-size: 0.8rem;
+  }
 }

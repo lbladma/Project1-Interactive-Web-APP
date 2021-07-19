@@ -18,7 +18,7 @@
 
 
 
-/* styling for the "I'm feeling button" on the left  - @Taufiq please edit the styling as you see fit for the various screen sizes*/
+
 * {
     box-sizing: border-box;
   }
@@ -61,3 +61,33 @@
     height: 55px;
     padding: 1em;
   }
+
+  /* emailUS button effects and settings 
+  .emailUS{
+	display: block;
+	margin: auto;
+	width: 120px;
+	height: 30px;
+	background: url("./images/emailme.gif");!important
+}
+
+.emailUS:hover
+{
+	background-position: 0 40px;
+}
+*/
+
+/* styling for various screen sizes*/
+
+@media (max-width: 690px) {
+  .btn {
+    font-size: 1rem;
+    margin: 16px 0px 0px 0px;
+    padding: 10px 15px;
+  }
+}
+  @media (max-width: 500px) {
+    .btn {
+      font-size: 0.8rem;
+  }
+}

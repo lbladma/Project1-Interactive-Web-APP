@@ -12,27 +12,28 @@ var getLocations = function (feelings) {
 
   fetch(requestUrl)
     .then(function (response) {
-      console.log(response);
       return response.json();
     })
     .then(function (data) {
-      
       initMap(data);
       for (var i = 0; i < data.results.length && i < 8; i++) {
-        addMarker({
-          lat: data.results[i].geometry.location.lat,
-          lng: data.results[i].geometry.location.lng,
-        });
-      }
+        if (data.results[i].photos) {
+          addMarker({
+            lat: data.results[i].geometry.location.lat,
+            lng: data.results[i].geometry.location.lng,
+          });
+        }
 
-      renderCards(data);
+        renderCards(data);
+      }
     });
 };
 
 var renderCards = function (data) {
   cardsDiv.innerHTML = "";
   for (var i = 0; i < data.results.length && i < 8; i++) {
-    cardsDiv.innerHTML += ` 
+    if (data.results[i].photos) {
+      cardsDiv.innerHTML += ` 
     <div class="card col s3">
   <div class="card-image waves-effect waves-block waves-light">
     <img class="activator"  width="180" height="180" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${data.results[i].photos[0].photo_reference}&key=${apiKey}" />
@@ -53,6 +54,7 @@ var renderCards = function (data) {
 </div>
 
   `;
+    }
   }
 };
 
@@ -64,7 +66,6 @@ function initMap(data) {
       center: { lat: 37.0902, lng: -95.7129 },
     };
     var map = new google.maps.Map(document.getElementById("map"), options);
-
   } else {
     options = {
       zoom: 12,
@@ -74,7 +75,6 @@ function initMap(data) {
       },
     };
     var map = new google.maps.Map(document.getElementById("map"), options);
-    console.log(data)
   }
 
   // Add marker function

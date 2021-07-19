@@ -1,22 +1,28 @@
+#sidebar, #main-content {
+    height: 100vh;
+    }
+
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+    height: 100%;
+  }
+  
+.map-container {
+    height: 400px;
+}
+
 .nav-link{
     padding-right:1em;  
 }
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
 
-main {
-    flex: 1 0 auto;
-}
 
 /* styling for the "I'm feeling button" on the left  - @Taufiq please edit the styling as you see fit for the various screen sizes*/
 * {
     box-sizing: border-box;
   }
-  button {
+  .button {
     margin-left: 40px;
     display: block;
     padding: 0;

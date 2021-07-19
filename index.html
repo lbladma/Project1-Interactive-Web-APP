@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -17,63 +18,73 @@
   </head>
   <body>
     <nav>
-      <div class="nav-wrapper  blue darken-4">
+      <div class="nav-wrapper blue darken-4">
         <a href="#" class="brand-logo center">Project name goes here</a>
       </div>
     </nav>
 
     <div class="row">
-      <div id="sidebar" class="col s3  light-blue lighten-3">
+      <div id="sidebar" class="col s3 light-blue lighten-3">
         <div class="card-panel teal lighten-2 center-align">I'm Feeling...</div>
-    
+
         <div
-          class="card-panel hoverable center-align light-blue lighten-5 col s6"
+          data-feelings="coffee shop"
+          class="card-panel hoverable center-align light-blue lighten-5"
         >
           Happy
         </div>
         <div
-          class="card-panel hoverable center-align light-blue lighten-1 col s6"
+          data-feelings="amusement"
+          class="card-panel hoverable center-align light-blue lighten-1"
         >
           Sad
         </div>
         <div
-          class="card-panel hoverable center-align  brown col s6"
+          data-feelings="fitness"
+          class="card-panel hoverable center-align brown"
         >
           Fit
         </div>
         <div
-          class="card-panel hoverable center-align deep-orange accent-4 col s6"
+          data-feelings="night club"
+          class="card-panel hoverable center-align deep-orange accent-4"
         >
           Sexy
         </div>
-        <div class="card-panel hoverable center-align green accent-2 col s6">
-          Anxious
+        <div
+          data-feelings="restaurants"
+          class="card-panel hoverable center-align green accent-2"
+        >
+          Hungry
         </div>
-        <div class="card-panel hoverable center-align cyan accent-3 col s6">
+        <div
+          data-feelings="bars"
+          class="card-panel hoverable center-align cyan accent-3"
+        >
           Thirsty
         </div>
-          </div>
+      </div>
 
       <div id="main-content" class="col s9">
         <div class="row">
-          <div class="col s12 ">
-            <div class="card-panel teal center-align">
-              <span class="white-text ">Dynamic map will go here
-              </span>
-            </div>
+          <div class="col s12 map-container">
+            <div id="map"></div>
           </div>
         </div>
-        <div id="cards-div" class="center-align"><h1>Cards Dynamically will show up here</h1></div>
+        <div id="cards-div" class="center-align row"></div>
       </div>
-   
     </div>
 
-    <footer class="page-footer  blue darken-4">
-    <a href="www.facebook.com"><img src="./images/facebook.png"></a>
-    <a href="www.twitter.com"><img src="./images/twitter.png"></a>
-     
+    <footer class="page-footer blue darken-4">
+      <a href="www.facebook.com"><img src="./images/facebook.png" /></a>
+      <a href="www.twitter.com"><img src="./images/twitter.png" /></a>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./js/script.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAduSi1EvrfI6l250MnC45FoTrF1BSIhXo&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
   </body>
 </html>
+

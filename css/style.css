@@ -62,20 +62,20 @@
     padding: 1em;
   }
 
-  /* emailUS button effects and settings 
-  .emailUS{
+  /* emailUS button effects and settings */
+  #emailUS{
 	display: block;
 	margin: auto;
 	width: 120px;
 	height: 30px;
-	background: url("./images/emailme.gif");!important
+	background: url("./images/emailme.gif");
 }
 
-.emailUS:hover
+#emailUS:hover
 {
 	background-position: 0 40px;
 }
-*/
+
 
 /* styling for various screen sizes*/
 

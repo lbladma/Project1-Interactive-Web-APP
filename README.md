@@ -6,7 +6,7 @@ This Repo is for the Project 1 Interactive Web Application. The main purpose of 
 <thead>
 <tr>
 <th><a href="https://github.com/Qabas-al-ani">Qabas Al Ani</a></th>
-<th><a href="https://github.com/lbladma">Taoufik Ami</a></th>
+<th><a href="https://github.com/lbladma">Taoufik Ammi</a></th>
 <th><a href="https://github.com/hlbrown">Hannah Brown</a></th>
 <th><a href="https://github.com/DionneNoellaBarretto">Dionne Noella Barretto</a></th>
 </tr>
@@ -22,6 +22,7 @@ This Repo is for the Project 1 Interactive Web Application. The main purpose of 
 </table>
 
 ## Project Resources:
+
 ```
 👉[Project Live URL]( https://lbladma.github.io/Project1-Interactive-Web-APP/)
 👉 [Project Plan/Proposal](https://docs.google.com/document/d/1UkL3EaRt6hdjlgQpQYlR67exUwjlNt862YEAd5OwlI8/edit#)
@@ -29,6 +30,7 @@ This Repo is for the Project 1 Interactive Web Application. The main purpose of 
 👉[Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing)
 
 ```
+
 
 ## User Story
 ```

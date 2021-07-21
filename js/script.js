@@ -12,6 +12,7 @@ var getLocations = function (feelings) {
 
   fetch(requestUrl)
     .then(function (response) {
+      console.log(response);
       return response.json();
     })
     .then(function (data) {
@@ -33,8 +34,8 @@ var renderCards = function (data) {
   cardsDiv.innerHTML = "";
   for (var i = 0; i < data.results.length && i < 8; i++) {
     if (data.results[i].photos) {
-      cardsDiv.innerHTML += ` 
-    <div class="card col s3">
+      cardsDiv.innerHTML += ` <div class="col l3 m4 s12">
+    <div class="card ">
   <div class="card-image waves-effect waves-block waves-light">
     <img class="activator"  width="180" height="180" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${data.results[i].photos[0].photo_reference}&key=${apiKey}" />
   </div>
@@ -51,6 +52,7 @@ var renderCards = function (data) {
     <p>Address: ${data.results[i].formatted_address}    
     <br>Rating: ${data.results[i].rating}</p>
   </div>
+</div>
 </div>
 
   `;
@@ -85,6 +87,22 @@ function initMap(data) {
     });
   };
 }
+var getMotivated = function () {
+  fetch("https://quotable.io/random")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.getElementById("qoute").innerHTML = `<h3><b>${data.content}</b></h3>`;
+    });
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  var options = { dismissible: true,
+  opacity: 0.5, };
+  var elems = document.querySelectorAll(".modal");
+  var instances = M.Modal.init(elems, options);
+});
 
 var buttonClickHandler = function (event) {
   var feelings = event.target.getAttribute("data-feelings");
@@ -96,3 +114,5 @@ var buttonClickHandler = function (event) {
 document
   .getElementById("sidebar")
   .addEventListener("click", buttonClickHandler);
+
+document.getElementById("motivation").addEventListener("click", getMotivated);

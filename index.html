@@ -49,11 +49,12 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
     </nav>
   -->
     <!-- A quick link to the feeling's section to the left -->
-    <!-- <div class="row">
+<div class="row">
       <div id="sidebar" class="col s3 light-blue lighten-3">
-         this may need to be converted into a dynamic element for scalability using jquery/javascript later as the number of feelings we add increases -->
-        <!-- <div class="card-panel teal lighten-2 center-align">
-          <button
+        <div class="card-panel teal lighten-2 center-align"></div>
+         <!-- this may need to be converted into a dynamic element for scalability using jquery/javascript later as the number of feelings we add increases  
+       
+        <button
             class="button"
             title="Hover over/outside this button alternately to see examples of feelings"
           >
@@ -67,9 +68,9 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
               <li>I don't know how I'm feeling</li>
             </ul>
           </button>
-        </div>
+        </div> 
       -->
-        <!-- added a hoverable title to match the emoji with the text expression -->
+     <!-- added a hoverable title to match the emoji with the text expression -->
         <div
           data-feelings="coffee shop"
           class="card-panel hoverable center-align pink lighten-5 col s6"
@@ -77,6 +78,7 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
         >
           Happy
         </div>
+
         <div
           data-feelings="amusement"
           class="card-panel hoverable center-align light-blue lighten-1 col s6"
@@ -84,6 +86,7 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
         >
           Sad
         </div>
+
         <div
           data-feelings="fitness"
           class="card-panel hoverable center-align brown col s6"
@@ -91,6 +94,7 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
         >
           Fit
         </div>
+
         <div
           data-feelings="night club"
           class="card-panel hoverable center-align deep-orange accent-4 col s6"
@@ -98,13 +102,15 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
         >
           Sexy
         </div>
+
         <div
-          data-feelings="spa"
+          data-feelings="massage"
           class="card-panel hoverable center-align green accent-2 col s6"
           title="😟"
         >
           Anxious
         </div>
+
         <div
           data-feelings="bars"
           class="card-panel hoverable center-align cyan accent-3 col s6"
@@ -112,33 +118,55 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
         >
           Thirsty
         </div>
-        <!-- using the full slot as opposed to half a slot -->
+
         <div
-          class="
-            card-panel
-            hoverable
-            center-align
-            lemon
-            chiffon
-            accent-
-            col
-            s12
-          "
-          title="❔"
+          data-feelings="lakes"
+          class="card-panel hoverable center-align cyan accent-3 col s6"
         >
-          I don't know how I feel
+          Board
         </div>
-        <!-- an area for searching for a feeling - for the logic here when clicked we may need to append to google search api url
-          <form method="get" action="/search/" class="search-form">
-            <label>
-            <button class="search-form__button" aria-label="search"> Search for a Feeling 🔍</button>
-            <input type="search" name="q" placeholder="Search a Feeling">
-            </label>
-          </form>
-          <div class="search-examples">
-            the href's for the feeling need to be updated once we have our api's 
-            <p><strong>eg</strong>&nbsp;<a href="#">happy</a> <a href="#">sad</a> </p>
-          </div> -->
+
+        <div
+          data-feelings="go kart"
+          class="card-panel hoverable center-align cyan accent-3 col s6"
+        >
+          Love To Race
+        </div>
+
+        <div
+          data-feelings="hookah places"
+          class="card-panel hoverable center-align cyan accent-3 col s6"
+        >
+          Social
+        </div>
+
+        <div
+          data-feelings="pawn shop"
+          class="card-panel hoverable center-align cyan accent-3 col s6"
+        >
+          thrifty
+        </div>
+
+        <!-- using the full slot as opposed to half a slot -->
+        <div id="motivation" class="center-align lemon chiffon accent-">
+          <a class="waves-effect waves-light btn modal-trigger" href="#modal1"
+            >motivation</a
+          >
+          <div id="modal1" class="modal">
+            <div id="qoute" class="modal-content"></div>
+            <div class="modal-footer">
+              <a
+                href="#!"
+                class="
+                  modal-action modal-close
+                  waves-effect waves-green
+                  btn-flat
+                "
+                >Agree</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
       <!-- area for map display -->
       <div id="main-content" class="col s9">
@@ -202,13 +230,16 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
     </footer>
 
     <!-- javascript links -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./js/script.js"></script>
-    <script
+
+    <!-- <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAduSi1EvrfI6l250MnC45FoTrF1BSIhXo&callback=initMap&libraries=&v=weekly"
       async
+    ></script> -->
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAduSi1EvrfI6l250MnC45FoTrF1BSIhXo&libraries=places&callback=initMap&v=weekly"
     ></script>
 
     <!-- this embedded script for the "I'm Feeling" button on the left will need to be moved to the script js file. 

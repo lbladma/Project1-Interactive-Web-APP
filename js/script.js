@@ -110,6 +110,8 @@ var buttonClickHandler = function (event) {
     getLocations(feelings);
   }
 };
+var instance = M.Modal.getInstance(elem);
+
 
 document
   .getElementById("sidebar")

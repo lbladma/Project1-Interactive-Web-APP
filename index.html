@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>I'm Feeling ____ App</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <title>I'm Feeling</title>
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -14,74 +15,37 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="./images/favicon2.png" type="image/png">
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
-    <nav>
-      <div class="nav-wrapper blue darken-4">
-        <a href="#" class="brand-logo left">I'm Feeling... App</a>
+    <nav id="header">
+      <div class="nav-wrapper grey darken-3">
+        <a href="#" class="brand-logo left">I'm Feeling</a>
         <a href="./contributors.html" class="right nav-link">Contributors</a>
         <a href="./index.html" class="right nav-link">Home</a>
       </div>
     </nav>
 
-    <!-- Application name up top -->
-     <!-- <nav> -->
-      <!--<div class="emoji teal lighten-2"></div>
-      <div class="nav-wrapper blue darken-4 top"> commenting this out
-       <a href="#" class="brand-logo center"></a>I'm Feeling "____"</a> -- instead of this adding an animated button as the title 
-      this may need to be converted into a dynamic element for scalability using jquery/javascript later as the number of feelings we add increases 
-title allows for text to appear when feeling is hovered upon, emjoi's ref https://www.w3schools.com/charsets/ref_emoji_smileys.asp  -->
-       <!-- <ul>
-        <li title="Select a feeling" style="font-weight: bold; color: black">
-          I'm Feeling:
-        </li>
-        <li title="Happy">😀</li>
-        <li title="Fit">💪</li>
-        <li title="Thirsty">🥂</li>
-        <li title="Anxious">😟</li>
-        <li title="Sexy">👙</li>
-        <li title="Sad">😞</li>
-         https://emojiguide.org/white-question-mark  
-        <li title="I don't know how I'm feeling">❔</li>
-      </ul>
-    </nav>
-  -->
-    <!-- A quick link to the feeling's section to the left -->
+<!-- A quick link to the feeling's section to the left -->
 <div class="row">
-      <div id="sidebar" class="col s3 light-blue lighten-3">
-        <div class="card-panel teal lighten-2 center-align"></div>
-         <!-- this may need to be converted into a dynamic element for scalability using jquery/javascript later as the number of feelings we add increases  
-       
-        <button
-            class="button"
-            title="Hover over/outside this button alternately to see examples of feelings"
-          >
-            <ul style="margin-top: 0px">
-              <li>I'm Feeling Happy</li>
-              <li>I'm Feeling Sad</li>
-              <li>I'm Feeling Sexy</li>
-              <li>I'm Feeling Fit</li>
-              <li>I'm Feeling Anxious</li>
-              <li>I'm Feeling Thirsty</li>
-              <li>I don't know how I'm feeling</li>
-            </ul>
-          </button>
-        </div> 
-      -->
-     <!-- added a hoverable title to match the emoji with the text expression -->
-        <div
+      <div id="sidebar" class="col s3 custom-opacity">
+        <div class="card-panel teal lighten-2 center-align  grey darken-2 "><h5>How Do You Feel?</h5></div>
+          <div
           data-feelings="coffee shop"
-          class="card-panel hoverable center-align pink lighten-5 col s6"
+          class="card-panel hoverable center-align  grey darken-2 col s6 custom-opacity"
           title="😀"
         >
           Happy
         </div>
 
-        <div
+        <div 
           data-feelings="amusement"
-          class="card-panel hoverable center-align light-blue lighten-1 col s6"
+          class="card-panel hoverable center-align  grey darken-2 lighten-1 col s6 custom-opacity  "
           title="😞"
         >
           Sad
@@ -89,7 +53,7 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
 
         <div
           data-feelings="fitness"
-          class="card-panel hoverable center-align brown col s6"
+          class="card-panel hoverable center-align  grey darken-2 col s6 custom-opacity"
           title="💪"
         >
           Fit
@@ -97,7 +61,7 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
 
         <div
           data-feelings="night club"
-          class="card-panel hoverable center-align deep-orange accent-4 col s6"
+          class="card-panel hoverable center-align  grey darken-2 accent-4 col s6 custom-opacity"
           title="👙"
         >
           Sexy
@@ -105,7 +69,7 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
 
         <div
           data-feelings="massage"
-          class="card-panel hoverable center-align green accent-2 col s6"
+          class="card-panel hoverable center-align  grey darken-2 col s6 custom-opacity"
           title="😟"
         >
           Anxious
@@ -113,7 +77,7 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
 
         <div
           data-feelings="bars"
-          class="card-panel hoverable center-align cyan accent-3 col s6"
+          class="card-panel hoverable center-align  grey darken-2 col s6 custom-opacity"
           title="🥂"
         >
           Thirsty
@@ -121,46 +85,46 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
 
         <div
           data-feelings="lakes"
-          class="card-panel hoverable center-align cyan accent-3 col s6"
+          class="card-panel hoverable center-align  grey darken-2 col s6 custom-opacity"
         >
           Board
         </div>
 
         <div
           data-feelings="go kart"
-          class="card-panel hoverable center-align cyan accent-3 col s6"
+          class="card-panel hoverable center-align  grey darken-2 col s6 custom-opacity"
         >
           Love To Race
         </div>
 
         <div
           data-feelings="hookah places"
-          class="card-panel hoverable center-align cyan accent-3 col s6"
+          class="card-panel hoverable center-align  grey darken-2 col s6 custom-opacity"
         >
           Social
         </div>
 
         <div
           data-feelings="pawn shop"
-          class="card-panel hoverable center-align cyan accent-3 col s6"
+          class="card-panel hoverable center-align  grey darken-2 col s6 custom-opacity"
         >
           thrifty
         </div>
 
         <!-- using the full slot as opposed to half a slot -->
         <div id="motivation" class="center-align lemon chiffon accent-">
-          <a class="waves-effect waves-light btn modal-trigger" href="#modal1"
+          <a class="waves-effect grey darken-2 btn modal-trigger custom-opacity " href="#modal1"
             >motivation</a
           >
-          <div id="modal1" class="modal">
-            <div id="qoute" class="modal-content"></div>
-            <div class="modal-footer">
+          <div id="modal1" class="modal grey darken-4">
+            <div id="qoute" class="modal-content white"></div>
+            <div class="modal-footer ">
               <a
                 href="#!"
                 class="
                   modal-action modal-close
                   waves-effect waves-green
-                  btn-flat
+                  btn-flat 
                 "
                 >Agree</a
               >
@@ -180,20 +144,10 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
         <div id="cards-div" class="center-align row"></div>
       </div>
     </div>
+   
   
-              
-        
-            <!-- Marquee element settings 
-              <marquee direction="down" 
-              width="100%" scrollamount="2" 
-              height="100">
-              <font color="blue" 
-              size="2">
-              <p align="center"> Made with &#10084;&#65039; CSS, JS, & sleepless nights </A></p></font></marquee>
-          -->
-                  
-    <!-- footer section -->
-    <footer class="page-footer blue darken-4">
+  <!-- footer section -->
+    <footer class="page-footer grey darken-3">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
@@ -215,57 +169,22 @@ title allows for text to appear when feeling is hovered upon, emjoi's ref https:
               </li>
             </ul>
           </div>
-              	<!-- EmailUS class 
-                <div class="emailUS">
-                  <a id="emailUS" 
-                
-                </div>
-                -->
-                <div class="emailUS">
-                
-                  <a href="mailto:projectonefeelingapp@gmail.com" target="_blank">Email US</a>
-                </div>
-      </div>
-
+          <div class="emailUS">
+      <a href="mailto:projectonefeelingapp@gmail.com" target="_blank">Email US</a>
+    </div>
+  </div>
     </footer>
-
-    <!-- javascript links -->
-    <script src="./js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <!-- <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAduSi1EvrfI6l250MnC45FoTrF1BSIhXo&callback=initMap&libraries=&v=weekly"
-      async
-    ></script> -->
     <script
       async
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAduSi1EvrfI6l250MnC45FoTrF1BSIhXo&libraries=places&callback=initMap&v=weekly"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAduSi1EvrfI6l250MnC45FoTrF1BSIhXo&callback=initMap&libraries=&v=weekly"
+      async
+    ></script> -->
 
-    <!-- this embedded script for the "I'm Feeling" button on the left will need to be moved to the script js file. 
-      This javascript portion will load last to avoid the html page from getting stuck incase the javascript calls don't render
-      Added link to the jQuery library -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>
-      // function runs every time the button is hovered upon
-      $(".button").hover(
-        function () {
-          var self = this;
-          // console.log(self) - references the button itself to avoid linking to anywhere;
-          var random = (Math.floor(Math.random() * 6) + 1) * 56;
-          //console.log(random);
-          var pos = -random;
-          // console.log(pos); defines which position text to stop at by running a math calculation;
-          setTimeout(function () {
-            $(self)
-              .find("ul")
-              .css("margin-top", pos + "px");
-          }, 300);
-        },
-        function () {
-          $(this).find("ul").css("margin-top", "0px");
-        }
-      );
-    </script>
+    
   </body>
 </html>

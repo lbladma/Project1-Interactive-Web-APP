@@ -93,7 +93,7 @@ var getMotivated = function () {
     })
     .then(function (data) {
       document.getElementById(
-        "qoute"
+        "quote"
       ).innerHTML = `<h3><b>${data.content}</b></h3>`;
     });
 };

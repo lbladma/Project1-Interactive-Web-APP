@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bars in Triangle</title>
+    <meta name="description" content="An example app for displaying local places on google map">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <h1 style="width: 100%;text-align:center; text-decoration:underline;">Google Maps Places</h1>
+    <div class="card" style="max-width: 30em; margin: 0 auto;">
+      <img src="https://loremflickr.com/320/240/bar" style="height: 15em;"/>
+      <div class="card-divider">
+        Look below for local hangouts 🥂
+      </div>
+      <div class="card-section">
+        <div id="map" style="width: 30rem; min-height: 20em;"></div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBnyyts1Sjyg2-DdrovYB6bWQA8wy37Tk&callback=initMap&libraries=places"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js" integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="./js/maps.js" ></script>
+  </body>
+</html>

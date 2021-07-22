@@ -35,18 +35,17 @@ var renderCards = function (data) {
   for (var i = 0; i < data.results.length && i < 8; i++) {
     if (data.results[i].photos) {
       cardsDiv.innerHTML += ` <div class="col l3 m4 s12">
-    <div class="card">
-  <div class="card-image waves-effect waves-block waves-light">
-    <img class="activator"  width="180" height="180" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${data.results[i].photos[0].photo_reference}&key=${apiKey}" />
-  </div>
-  <div class="card-content">
-    <span class="card-title activator grey-text text-darken-4"
-      >${data.results[i].name}<i class="material-icons right">more_vert</i></span
-    >
-
-  </div>
-  <div class="card-reveal">
-    <span class="card-title grey-text text-darken-4"
+      <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator"  width="180" height="180" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${data.results[i].photos[0].photo_reference}&key=${apiKey}" />
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4"
+          >${data.results[i].name}<i class="material-icons right">more_vert</i></span
+        >
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4"
       >${data.results[i].name}<i class="material-icons right">close</i></span
     >
     <p>Address: ${data.results[i].formatted_address}    
@@ -97,7 +96,6 @@ var getMotivated = function () {
       ).innerHTML = `<h3><b>${data.content}</b></h3>`;
     });
 };
-
 document.addEventListener("DOMContentLoaded", function () {
   var options = { dismissible: true,  };
   var elems = document.querySelectorAll(".modal");

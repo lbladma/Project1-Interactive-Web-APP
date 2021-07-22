@@ -19,49 +19,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./images/favicon2.png" type="image/png">
-    <link rel="stylesheet" href="./css/style.css" />
-  
-  </head>
-
-  <body>
-    <nav>
-      <div class="nav-wrapper grey darken-3">
-        <a href="#" class="brand-logo left">I'm Feeling... App</a>
-        <a href="./contributors.html" class="right nav-link">Contributors</a>
-        <a href="./index.html" class="right nav-link">Home</a>
-      </div>
-    </nav>
-
-<!-- A quick link to the feeling's section to the left -->
-<div class="row" id="backside">
-      <div id="sidebar" class="col s3 light-blue lighten-3">
-        <div class="card-panel teal lighten-2 center-align"></div>
-    <!--this may need to be converted into a dynamic element for scalability using jquery/javascript later as the number of feelings we add increases  
+        <link rel="stylesheet" href="./css/style.css" />
+      </head>
     
-        <button
-            class="button"
-            title="Hover over/outside this button alternately to see examples of feelings"
-          >
-            <ul style="margin-top: 0px">
-              <li>I'm Feeling Happy</li>
-              <li>I'm Feeling Sad</li>
-              <li>I'm Feeling Sexy</li>
-              <li>I'm Feeling Fit</li>
-              <li>I'm Feeling Anxious</li>
-              <li>I'm Feeling Thirsty</li>
-              <li>I don't know how I'm feeling</li>
-            </ul>
-          </button>
-        </div> 
-      -->
-    <!-- added a hoverable title to match the emoji with the text expression -->
-        <div
-          data-feelings="coffee shop"
-          class="card-panel hoverable center-align  grey darken-2 col s6 custom-opacity"
-          title="😀"
-        >
-          Happy
-        </div>
+      <body>
+        <nav id="header">
+          <div class="nav-wrapper grey darken-3">
+            <a href="#" class="brand-logo left">I'm Feeling</a>
+            <a href="./contributors.html" class="right nav-link">Contributors</a>
+            <a href="./index.html" class="right nav-link">Home</a>
+          </div>
+        </nav>
+<!-- A quick link to the feeling's section to the left -->
+<div class="row">
+  <div id="sidebar" class="col s3 custom-opacity">
+    <div class="card-panel teal lighten-2 center-align  grey darken-2 "><h5>How Do You Feel?</h5></div>
+      <!-- added a hoverable title to match the emoji with the text expression -->
+      <div
+      data-feelings="coffee shop"
+      class="card-panel hoverable center-align  grey darken-2 col s6 custom-opacity"
+      title="😀"
+    >
+      Happy
+    </div>
 
         <div 
           data-feelings="amusement"
@@ -163,9 +143,7 @@
         <!-- area for api results in modal form -->
         <div id="cards-div" class="center-align row"></div>
       </div>
-    </div>
-
-  
+    </div>  
   <!-- footer section -->
     <footer class="page-footer grey darken-3">
       <div class="container">

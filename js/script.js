@@ -85,6 +85,8 @@ function initMap(data) {
     });
   };
 }
+
+
 var getMotivated = function () {
   fetch("https://quotable.io/random")
     .then(function (response) {

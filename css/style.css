@@ -1,12 +1,10 @@
 #sidebar {
   height: 100vh;
-  opacity: 0.9 !important;
 }
 
-/* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
 #map {
   height: 100%;
+  z-index: 1;
 }
 
 .map-container {
@@ -19,9 +17,9 @@
 
 body {
   font-family: "Cinzel", serif;
-  background-color: lightblue;
+  background-color: rgb(210, 220, 226);
   background-size: cover;
-  background-image: url(../images/bg2.jpg);
+  cursor: default;
 }
 
 footer {
@@ -52,15 +50,17 @@ footer {
   z-index: -1 !important;
 }
 
-.custom-opacity {
-  opacity: 0.9;
-}
-
 #modal1 {
   color: black;
- /* position: relative;
-  z-index: 1200 !important;  */
-} 
+}
+span {
+  font-size: medium !important;
+  margin: 0;
+}
+
+#qoute {
+  opacity: 1 !important;
+}
 
 /* emailUS button effects and settings */
 #emailUS {

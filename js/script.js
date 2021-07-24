@@ -78,8 +78,8 @@ var renderCards = function (results) {
           i
         ].photos[0].getUrl()}" />
       </div>
-      <div class="card-content text-black z-depth-4">
-        <span class="card-title activator"
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4"
           >${results[i].name}<i class="material-icons right">more_vert</i></span
         >
         </div>
@@ -116,7 +116,7 @@ var getMotivated = function () {
 document.addEventListener("DOMContentLoaded", function () {
   var options = { dismissible: true };
   var elements = document.querySelectorAll(".modal");
-  // var instances = M.Modal.init(elements, options); removing variable storing this logic for the modal being built
+  //var instances = M.Modal.init(elements, options); //removing variable storing this logic for the modal being built
   M.Modal.init(elements, options);
 });
 
@@ -130,6 +130,12 @@ var buttonClickHandler = function (event) {
     initMap(type);
   }
 };
-//  Those are an event listeners
+//var instance = M.Modal.getInstance(elements);
+//  Those are an event listeners 
+document
+.getElementById("sidebar")
+.addEventListener("click", buttonClickHandler);
 
-document.getElementById("motivation").addEventListener("click", getMotivated);
+document
+.getElementById("motivation")
+.addEventListener("click", getMotivated);

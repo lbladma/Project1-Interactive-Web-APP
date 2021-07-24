@@ -26,7 +26,7 @@
   <body>
     <nav id="header">
       <div class="nav-wrapper grey darken-3">
-        <a href="./index.html" class="brand-logo left">I'm Feeling</a>
+        <a href="#" class="brand-logo left">I'm Feeling</a>
         <a href="./contributors.html" class="right nav-link">Contributors</a>
         <a href="./index.html" class="right nav-link">Home</a>
       </div>
@@ -41,14 +41,14 @@
         <div
           data-feelings="cafe"
           class="
-          card-panel
-          hoverable
-          center-align
-          grey
-          darken-2
-          col
-          s6
-          custom-opacity
+            card-panel
+            hoverable
+            center-align
+            grey
+            darken-2
+            col
+            s6
+            custom-opacity
           "
           title="☕"
         >
@@ -58,32 +58,32 @@
         <div
           data-feelings="park"
           class="
-          card-panel
-          hoverable
-          center-align
-          grey
-          darken-2
-          col
-          s6
-          custom-opacity
+            card-panel
+            hoverable
+            center-align
+            grey
+            darken-2
+            col
+            s6
+            custom-opacity
           "
           title="🚶"
         >
           Like a walk
         </div>
-        
 
         <div
           data-feelings="amusement_park"
           class="
-          card-panel
-          hoverable
-          center-align
-          grey
-          darken-2
-          col
-          s6
-          custom-opacity
+            card-panel
+            hoverable
+            center-align
+            grey
+            darken-2
+            lighten-1
+            col
+            s6
+            custom-opacity
           "
           title="🎢"
         >
@@ -115,6 +115,7 @@
             center-align
             grey
             darken-2
+            accent-4
             col
             s6
             custom-opacity
@@ -127,15 +128,15 @@
         <div
           data-feelings="spa"
           class="
-          card-panel
-          hoverable
-          center-align
-          grey
-          darken-2
-          col
-          s6
-          custom-opacity
-        "
+            card-panel
+            hoverable
+            center-align
+            grey
+            darken-2
+            col
+            s6
+            custom-opacity
+          "
           title="😟"
         >
           Anxious
@@ -162,15 +163,15 @@
         <div
           data-feelings="library"
           class="
-          card-panel
-          hoverable
-          center-align
-          grey
-          darken-2
-          col
-          s6
-          custom-opacity
-        "
+            card-panel
+            hoverable
+            center-align
+            grey
+            darken-2
+            col
+            s6
+            custom-opacity
+          "
           title="📚"
         >
           Reading
@@ -211,9 +212,7 @@
 
         <!-- using the full slot as opposed to half a slot -->
         <div id="motivation" class="center-align lemon chiffon accent-">
-          <a class="waves-effect grey darken-2 btn modal-trigger" href="#modal1"
-            >motivation</a
-          >
+          <a class="waves-effect grey darken-2 btn modal-trigger custom-opacity" href="#modal1">motivation</a>
           <div id="modal1" class="modal grey darken-4">
             <div id="quote" class="modal-content white"></div>
             <div class="modal-footer">
@@ -229,10 +228,8 @@
             </div>
           </div>
         </div>
+        
       </div>
-      <!--area to move the above to a side nav for small screens-->
-     
-    
       <!-- area for map display -->
       <div id="main-content" class="col s9">
         <div class="row">
@@ -242,28 +239,28 @@
         </div>
 
         <!-- area for api results in modal form -->
-        <div id="cards-div" class="center-align large"></div>
+        <div id="cards-div" class="center-align row"></div>
       </div>
     </div>
 
     <!-- footer section -->
     <footer class="page-footer grey darken-3">
-      <div class="container grey darken-3">
-        <div class="row grey darken-3">
+      <div class="container">
+        <div class="row">
           <div class="col l6 s12">
             <!--Div section for contributors-->
             <h5 class="white-text">Contributors</h5>
             <ul>
               <li>
-                <a class="hoverable " href="./contributors.html#qabasCard">
+                <a href="./contributors.html/#qabasCard">
                   <h6>Qabas Al ani</h6>
                 </a>
               </li>
-              <li><a href="./contributors.html#taoufikCard">
-                <h6>Taoufik Ami</h6></a>
+              <li>
+                <h6>Taoufik Ami</h6>
               </li>
-              <li><a href="./contributors.html#hannahCard">
-                <h6>Hannah Brown</h6></a>
+              <li>
+                <h6>Hannah Brown</h6>
               </li>
               <li>
                 <h6>Dionne Noella Barretto</h6>
@@ -280,7 +277,7 @@
         <!--end div for row-->
       </div>
       <!--end div for container-->
-      <div class="footer-copyright grey darken-3">
+      <div class="footer-copyright">
         <!--beginning div for copyright/marquee section of footer-->
         <div class="container">
           <!-- https://www.tutorialspoint.com/html/html_marquees.html marquee animation  -->
@@ -288,11 +285,8 @@
         </div>
       </div>
     </footer>
-    <script
-      async
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAduSi1EvrfI6l250MnC45FoTrF1BSIhXo&callback=initMap&libraries=places"
-    ></script>
-    
+    <scrip async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAduSi1EvrfI6l250MnC45FoTrF1BSIhXo&callback=initMap&libraries=places"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

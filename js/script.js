@@ -132,9 +132,9 @@ var buttonClickHandler = function (event) {
 };
 //var instance = M.Modal.getInstance(elements);
 //  Those are an event listeners 
-document
+(document
 .getElementById("sidebar")
-.addEventListener("click", buttonClickHandler);
+.addEventListener("click", buttonClickHandler), 0.38);
 
 document
 .getElementById("motivation")

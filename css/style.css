@@ -1,12 +1,11 @@
 #sidebar {
   height: 100vh;
-  opacity: 0.9 !important;
 }
 
-/* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
 #map {
   height: 100%;
+  z-index: 1;
+  border-radius: 15px;
 }
 
 .map-container {
@@ -17,11 +16,16 @@
   padding-right: 1em;
 }
 
+.card-panel {
+  border-radius: 15px;
+  width: auto;
+}
+
 body {
   font-family: "Cinzel", serif;
-  background-color: lightblue;
+  background-color: rgb(210, 220, 226);
   background-size: cover;
-  background-image: url(../images/bg2.jpg);
+  cursor: default;
 }
 
 footer {
@@ -52,15 +56,18 @@ footer {
   z-index: -1 !important;
 }
 
-.custom-opacity {
-  opacity: 0.9;
-}
-
 #modal1 {
   color: black;
- /* position: relative;
-  z-index: 1200 !important;  */
-} 
+  border-radius: 15px;
+}
+span {
+  font-size: medium !important;
+  margin: 0;
+}
+
+#quote {
+  opacity: 1 !important;
+}
 
 /* emailUS button effects and settings */
 #emailUS {
@@ -75,7 +82,7 @@ footer {
   background-position: 0 40px;
 }
 
-/* styling for various screen sizes*/
+/* styling for various screen sizes
 
 @media (max-width: 690px) {
   .btn {
@@ -88,4 +95,4 @@ footer {
   .btn {
     font-size: 0.8rem;
   }
-}
+} */

@@ -22,10 +22,13 @@
 }
 
 body {
-  font-family: "Cinzel", serif;
+  font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif ;
   background-color: rgb(210, 220, 226);
   background-size: cover;
   cursor: default;
+}
+.contributorRow{
+  background-color:  rgb(210, 220, 226);
 }
 
 footer {
@@ -43,6 +46,7 @@ footer {
 #sidebar {
   color: white;
 }
+
 
 .row {
   margin-bottom: 0%;
@@ -68,6 +72,11 @@ span {
 #quote {
   opacity: 1 !important;
 }
+.card-title{
+  font-weight: bolder;
+}
+
+
 
 /* emailUS button effects and settings */
 #emailUS {
@@ -81,18 +90,27 @@ span {
 #emailUS:hover {
   background-position: 0 40px;
 }
+.btn{
+margin:1px;
+font-size: medium;
+
+}
 
 /* styling for various screen sizes
 
-@media (max-width: 690px) {
+@media (max-width: 1200px) {
   .btn {
-    font-size: 1rem;
-    margin: 16px 0px 0px 0px;
-    padding: 10px 15px;
+    font-size: 12px;
+    margin: 1px;
+    padding: 0px 15px;
+    color:white;
+    display: center;
   }
 }
 @media (max-width: 500px) {
   .btn {
-    font-size: 0.8rem;
+    font-size: 1em;
+    margin-top:1px;
+    
   }
 } */

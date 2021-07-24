@@ -52,6 +52,7 @@ footer {
 
 #modal1 {
   color: black;
+ 
 }
 span {
   font-size: medium !important;
@@ -73,6 +74,11 @@ span {
 
 #emailUS:hover {
   background-position: 0 40px;
+}
+
+
+#showMe {
+  justify-content: center;
 }
 
 /* styling for various screen sizes*/

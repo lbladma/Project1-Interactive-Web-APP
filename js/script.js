@@ -2,7 +2,6 @@
 var cardsDiv = document.getElementById("cards-div");
 var map;
 var service;
-var infowindow;
 
 // This function will get the info from google api and gets current user's location and initiate the map and set to the current user's location
 function initMap(type) {
@@ -12,6 +11,7 @@ function initMap(type) {
     async ({ coords: { latitude: lat, longitude: lon } }) => {
       // This variable will get the user's location '
       const myLocation = new google.maps.LatLng(lat, lon);
+
       // This will initiate map
       map = new google.maps.Map(document.getElementById("map"), {
         // center the map based on user location
@@ -128,7 +128,7 @@ var buttonClickHandler = function (event) {
     initMap(type);
   }
 };
-//  Those are an event listeners 
+//  Those are an event listeners
 document
   .getElementById("sidebar")
   .addEventListener("click", buttonClickHandler);

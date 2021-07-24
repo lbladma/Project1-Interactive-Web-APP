@@ -6,18 +6,18 @@ var service;
 // This function will get the info from google api and gets current user's location and initiate the map and set to the current user's location
 function initMap(type) {
   // This will get the current user's location
-  navigator.geolocation.getCurrentPosition(
+     navigator.geolocation.getCurrentPosition(
     // This async function will use the user's coordinates
     async ({ coords: { latitude: lat, longitude: lon } }) => {
-      // This variable will get the user's location '
+       //This variable will get the user's location '
       const myLocation = new google.maps.LatLng(lat, lon);
       // This will initiate map
-      map = new google.maps.Map(document.getElementById("map"), {
+       map = new google.maps.Map(document.getElementById("map"), {
         // center the map based on user location
-        center: myLocation,
+         center: myLocation,
         // This will zoom the map
         zoom: 12,
-      });
+      });//
 
       // The request object
       const request = {
@@ -114,7 +114,7 @@ var getMotivated = function () {
 
 // This will initiate the modal
 document.addEventListener("DOMContentLoaded", function () {
-  var options = { dismissible: true };
+  var options = { dismissible: true, };
   var elements = document.querySelectorAll(".modal");
   //var instances = M.Modal.init(elements, options); //removing variable storing this logic for the modal being built
   M.Modal.init(elements, options);
@@ -139,3 +139,6 @@ document
 document
 .getElementById("motivation")
 .addEventListener("click", getMotivated);
+window.addEventListener('load', (event) => {
+  initMap();
+})

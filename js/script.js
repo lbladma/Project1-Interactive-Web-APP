@@ -11,10 +11,6 @@ function initMap(type) {
     async ({ coords: { latitude: lat, longitude: lon } }) => {
       // This variable will get the user's location '
       const myLocation = new google.maps.LatLng(lat, lon);
-      //set lat long in local storage ( this is not required since the lat long is cached when we use https://lbladma.github.io/Project1-Interactive-Web-APP/#! ) 
-      localStorage.setItem('myLat', lat);
-      localStorage.setItem('myLong', lon);
-      // console.log(localStorage);
       // This will initiate map
       map = new google.maps.Map(document.getElementById("map"), {
         // center the map based on user location
@@ -82,8 +78,8 @@ var renderCards = function (results) {
           i
         ].photos[0].getUrl()}" />
       </div>
-      <div class="card-content text-black z-depth-4">
-        <span class="card-title activator"
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4"
           >${results[i].name}<i class="material-icons right">more_vert</i></span
         >
         </div>
@@ -138,19 +134,5 @@ var buttonClickHandler = function (event) {
 document
   .getElementById("sidebar")
   .addEventListener("click", buttonClickHandler);
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-  });
-
-  // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
-  // var collapsibleElem = document.querySelector('.collapsible');
-  // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
-
-  // Or with jQuery
-
-  $(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
 
 document.getElementById("motivation").addEventListener("click", getMotivated);

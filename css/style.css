@@ -1,12 +1,11 @@
 #sidebar {
   height: 100vh;
-  opacity: 0.9 !important;
 }
 
-/* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
 #map {
   height: 100%;
+  z-index: 1;
+  border-radius: 15px;
 }
 
 .map-container {
@@ -17,12 +16,19 @@
   padding-right: 1em;
 }
 
-body {
-  font-family: "Cinzel", serif;
-  background-color: lightblue;
-  background-size: cover;
-  background-image: url(../images/bg2.jpg);
+.card-panel {
+  border-radius: 15px;
+  width: auto;
+}
 
+body {
+  font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif ;
+  background-color: rgb(210, 220, 226);
+  background-size: cover;
+  cursor: default;
+}
+.contributorRow{
+  background-color:  rgb(210, 220, 226);
 }
 
 footer {
@@ -41,6 +47,7 @@ footer {
   color: white;
 }
 
+
 .row {
   margin-bottom: 0%;
 }
@@ -53,15 +60,23 @@ footer {
   z-index: -1 !important;
 }
 
-.custom-opacity {
-  opacity: 0.9;
-}
-
 #modal1 {
   color: black;
- /* position: relative;
-  z-index: 1200 !important;  */
-} 
+  border-radius: 15px;
+}
+span {
+  font-size: medium !important;
+  margin: 0;
+}
+
+#quote {
+  opacity: 1 !important;
+}
+.card-title{
+  font-weight: bolder;
+}
+
+
 
 /* emailUS button effects and settings */
 #emailUS {
@@ -75,18 +90,27 @@ footer {
 #emailUS:hover {
   background-position: 0 40px;
 }
+.btn{
+margin:1px;
+font-size: medium;
 
-/* styling for various screen sizes*/
+}
 
-@media (max-width: 690px) {
+/* styling for various screen sizes
+
+@media (max-width: 1200px) {
   .btn {
-    font-size: 1rem;
-    margin: 16px 0px 0px 0px;
-    padding: 10px 15px;
+    font-size: 12px;
+    margin: 1px;
+    padding: 0px 15px;
+    color:white;
+    display: center;
   }
 }
 @media (max-width: 500px) {
   .btn {
-    font-size: 0.8rem;
+    font-size: 1em;
+    margin-top:1px;
+    
   }
-}
+} */

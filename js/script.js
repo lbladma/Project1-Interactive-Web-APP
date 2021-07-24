@@ -11,6 +11,10 @@ function initMap(type) {
     async ({ coords: { latitude: lat, longitude: lon } }) => {
       // This variable will get the user's location '
       const myLocation = new google.maps.LatLng(lat, lon);
+      //set lat long in local storage ( this is not required since the lat long is cached when we use https://lbladma.github.io/Project1-Interactive-Web-APP/#! ) 
+      localStorage.setItem('myLat', lat);
+      localStorage.setItem('myLong', lon);
+      // console.log(localStorage);
       // This will initiate map
       map = new google.maps.Map(document.getElementById("map"), {
         // center the map based on user location

@@ -77,8 +77,8 @@ var renderCards = function (results) {
           i
         ].photos[0].getUrl()}" />
       </div>
-      <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4"
+      <div class="card-content text-black z-depth-4">
+        <span class="card-title activator"
           >${results[i].name}<i class="material-icons right">more_vert</i></span
         >
         </div>
@@ -132,5 +132,19 @@ var buttonClickHandler = function (event) {
 document
   .getElementById("sidebar")
   .addEventListener("click", buttonClickHandler);
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+
+  // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
+  // var collapsibleElem = document.querySelector('.collapsible');
+  // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
 
 document.getElementById("motivation").addEventListener("click", getMotivated);

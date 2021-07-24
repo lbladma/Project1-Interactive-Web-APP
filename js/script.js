@@ -24,8 +24,8 @@ function initMap(type) {
       const request = {
         //  This will set the user's location'
         location: myLocation,
-        // This will set a radius
-        radius: "5000",
+        // This will set a radius  (increased radius of search results overall to circumvent need for if condition for no results rendering)
+        radius: "50000",
         // This will set the type of search
         type: type,
       };
@@ -33,6 +33,7 @@ function initMap(type) {
       service = new google.maps.places.PlacesService(map);
       //  This A Nearby Search lets you search for places within a specified area.
       service.nearbySearch(request, (results, status) => {
+        
         // This will call the render cards and passing the results
         renderCards(results);
         // This will check the status and the results
@@ -66,6 +67,7 @@ function createMarker(place) {
 
 // This function render Cards
 var renderCards = function (results) {
+
   // This will empty the cards div
   cardsDiv.innerHTML = "";
   for (var i = 0; i < results.length && i < 8; i++) {
@@ -106,7 +108,7 @@ var getMotivated = function () {
     .then(function (data) {
       // This will inject data content in the modal
       document.getElementById(
-        "qoute"
+        "quote"
       ).innerHTML = `<h3><b>${data.content}</b></h3>`;
     });
 };
@@ -114,8 +116,9 @@ var getMotivated = function () {
 // This will initiate the modal
 document.addEventListener("DOMContentLoaded", function () {
   var options = { dismissible: true };
-  var elems = document.querySelectorAll(".modal");
-  var instances = M.Modal.init(elems, options);
+  var elements = document.querySelectorAll(".modal");
+  // var instances = M.Modal.init(elements, options); removing variable storing this logic for the modal being built
+  M.Modal.init(elements, options);
 });
 
 // This will handle the click

@@ -5,6 +5,7 @@
 #map {
   height: 100%;
   z-index: 1;
+  border-radius: 15px;
 }
 
 .map-container {
@@ -13,6 +14,11 @@
 
 .nav-link {
   padding-right: 1em;
+}
+
+.card-panel {
+  border-radius: 15px;
+  width: auto;
 }
 
 body {
@@ -59,7 +65,7 @@ span {
   margin: 0;
 }
 
-#qoute {
+#quote {
   opacity: 1 !important;
 }
 
@@ -94,4 +100,4 @@ span {
   .btn {
     font-size: 0.8rem;
   }
-}
+} */

@@ -1,4 +1,4 @@
-// Declare variables
+// Global variable declartion
 var cardsDiv = document.getElementById("cards-div");
 var map;
 var service;
@@ -6,7 +6,7 @@ var service;
 // This function will get the info from google api and gets current user's location and initiate the map and set to the current user's location: logic referenced: https://developers.google.com/maps/documentation/javascript/places
 function initMap(type) {
   // This will get the current user's location
-  // navigator.geolocation.watchPosition( - was testing app by switching locations
+  // navigator.geolocation.watchPosition( - was testing app by switching locations )
   navigator.geolocation.getCurrentPosition(
     // This async function will use the user's coordinates (async code is used when execution may take a while to proceed with execution without waiting especially when using laptops as opposed to mobile phones outdoors)
     async ({ coords: { latitude: lat, longitude: lon } }) => {
@@ -16,25 +16,23 @@ function initMap(type) {
       // This variable will get the user's location from local storage
       const myLocation = new google.maps.LatLng(localStorage.getItem('myLat'), localStorage.getItem('myLong'));
       // This will initiate map
-      map = new google.maps.Map(document.getElementById("map"), {
+       map = new google.maps.Map(document.getElementById("map"), {
         // center the map based on user location
-        center: myLocation,
-        // This will zoom the map
+         center: myLocation,
+        // This will zoom in on the map
         zoom: 10,
       });
 
-      // The request object
-      const request = {
-        //  This will set the user's location as gathers above
-        location: myLocation,
+      // The request object per locations values from local storage defined above
+      const request = { location: myLocation,
         // This will set a perimeter of the search  (increased radius of search results overall to circumvent need for if condition for no results rendering)
         radius: "20000",
-        // This will set the type of search
+        // This will set the type of search to which is defined in the button clicker function below to reference specific data-feelings ties to the places library api type property
         type: type,
       };
-      // This Contain methods related to searching for places and retrieving details about a place.
+      // This contains methods related to searching for places and retrieving details about a place.
       service = new google.maps.places.PlacesService(map);
-      //  This A Nearby Search lets you search for places within a specified area.
+      //  This is rendering Nearby places
       service.nearbySearch(request, (results, status) => {
         
         // This will call the render cards and passing the results
@@ -44,7 +42,7 @@ function initMap(type) {
         if (status === google.maps.places.PlacesServiceStatus.OK && results) {
           //removed the limiter for 8 results
           for (let i = 0; i < results.length; i++) {
-            // this will call the create function and passing the result[i]
+            // this will call the create function and pass result[i]
             createMarker(results[i]);
           }
           // This will center the map
@@ -53,7 +51,7 @@ function initMap(type) {
       });
     },
     () => {
-          //  This will log the error
+          //  This will log an error should the user block their browser location 
       console.log("Couldn't get geolocation. Please check your Browser Setting Locations to 'Allow' location tracking!");
     }
   );
@@ -91,7 +89,7 @@ var renderCards = function (results) {
 
 // This function will make api call
 var getMotivated = function () {
-  // This will make an api call and get the data from api response
+  // This will make an api call to motivation api and get the data from api response
   fetch("https://quotable.io/random")
   .then(function (response) {
       return response.json();
@@ -104,15 +102,15 @@ var getMotivated = function () {
 
 // This will initiate the modal
 document.addEventListener("DOMContentLoaded", function () {
-  var options = { dismissible: true };
+  var options = { dismissible: true, };
   var elements = document.querySelectorAll(".modal");
-  // var instances = M.Modal.init(elements, options); removing variable storing this logic for the modal being built
+  //var instances = M.Modal.init(elements, options); //removing variable storing this logic as its not being referenced any where else
   M.Modal.init(elements, options);
 });
 
-// This will handle the click
+// This will handle the click action
 var buttonClickHandler = function (event) {
-  //  This will target the event when the user click's and get data attribute
+  //  This will target the event when the user click's and get data attribute which is defined in index based on the places api library type property
   var type = event.target.getAttribute("data-feelings");
   // This will check if the data attribute is there
   if (type) {

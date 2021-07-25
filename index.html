@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>I'm Feeling</title>
+    <!-- Import Google Icon Font -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"/>
     <link rel="shortcut icon" href="./images/favicon2.png" type="image/png" />
@@ -17,37 +20,41 @@
   <body>
     <nav id="header">
       <div class="nav-wrapper grey darken-3">
-        <a href="./index.html" class="brand-logo left"> I'm Feeling</a>
-        <a href="./contributors.html" class="right nav-link">Contributors</a>
-        <a href="./index.html" class="right nav-link">Home</a>
+        <!-- pre formats the visual page to match whats written here in index, brand-logo, left and right are styling the nav elements using materialize -->
+        <pre><a href="./index.html" class="brand-logo left"> I'm Feeling</a> <a href="./contributors.html" class="right nav-link">Contributors</a> <a href="./index.html" class="right nav-link">Home</a> </pre>
       </div>
     </nav>
     <!-- A quick link to the feeling's section to the left -->
     <div class="row">
-      <div id="sidebar" class="col s3 custom-opacity">
-        <div class="card-panel teal lighten-2 center-align grey darken-2"><h5>How Do You Feel?</h5></div>
-          <!-- added a hoverable title to match the emoji with the text expression -->
-          <div data-feelings="cafe" class="card-panel hoverable center-align grey darken-2 col s6 custom-opacity" title="☕"> Like a Latte </div>
-          <div data-feelings="park" class="card-panel hoverable center-align grey darken-2 col s6 custom-opacity" title="🚶"> Like a walk </div>
-          <div data-feelings="amusement_park" class="card-panel hoverable center-align grey darken-2 lighten-1 col s6 custom-opacity" title="🎢"> Adventurous</div>
-          <div data-feelings="gym" class="card-panel hoverable center-align grey darken-2 col s6 custom-opacity" title="🏋️"> Fit</div>
-          <div data-feelings="night_club" class="card-panel hoverable center-align grey darken-2 accent-4 col s6 custom-opacity" title="👙"> Pub</div>
-          <div data-feelings="spa" class="card-panel hoverable center-align grey darken-2 col s6 custom-opacity" title="😟"> Anxious</div>
-          <div data-feelings="bar" class="card-panel hoverable center-align grey darken-2 col s6 custom-opacity" title="🥂"> Thirsty</div>
-          <div data-feelings="library" class="card-panel hoverable center-align grey darken-2 col s6 custom-opacity" title="📚"> Reading</div>
-          <div data-feelings="restaurant" class="card-panel hoverable center-align grey darken-2 col s6 custom-opacity" title="🤤"> Hungry</div>
-          <div data-feelings="shopping_mall" class="card-panel hoverable center-align grey darken-2 col s6 custom-opacity" title="🛍️"> Shopping</div>
-          <!-- using the full slot as opposed to half a slot -->
-          <div id="motivation" class="center-align lemon chiffon accent-"> <a class="waves-effect grey darken-2 btn modal-trigger" href="#modal1">motivation</a>
-            <div id="modal1" class="modal grey darken-4">
-              <div id="quote" class="modal-content white"></div>
+      <!-- shrunk this to s2 instead of s3 -->
+      <div id="sidebar" class="col s2">
+        <div class="card-panel teal lighten-2 center-align grey darken-2"><h5 title="Click on one of the feelings from below to be shown results on how best to process your feelings">How Do You Feel?</h5></div>
+          <!-- added a hoverable title to match the emoji with the text expression using https://emojipedia.org/, data feelings is being referenced from the api field of type : https://developers.google.com/maps/documentation/places/web-service/supported_types, materialize colors - https://materializecss.com/color.html  -->
+          <div data-feelings="cafe" class="card-panel hoverable center-align grey darken-2 col s6" title="☕"> Like a Latte </div>
+          <div data-feelings="park" class="card-panel hoverable center-align grey darken-2 col s6" title="🚶"> Like Walking </div>
+          <div data-feelings="hospital" class="card-panel hoverable center-align grey darken-2 col s6" title="🤒"> Unwell </div>
+          <div data-feelings="tourist-attraction" class="card-panel hoverable center-align grey darken-2 lighten-1 col s6" title="🎟️"> Touristy</div>
+          <div data-feelings="amusement_park" class="card-panel hoverable center-align grey darken-2 lighten-1 col s6" title="🎢"> Adventurous</div>
+          <div data-feelings="gym" class="card-panel hoverable center-align grey darken-2 col s6" title="🏋️"> Fit</div>
+          <div data-feelings="night_club" class="card-panel hoverable center-align grey darken-2 accent-4 col s6" title="👙"> Pub</div>
+          <div data-feelings="spa" class="card-panel hoverable center-align grey darken-2 col s6" title="😟"> Anxious</div>
+          <div data-feelings="bar" class="card-panel hoverable center-align grey darken-2 col s6" title="🥂"> Thirsty</div>
+          <div data-feelings="library" class="card-panel hoverable center-align grey darken-2 col s6" title="📚"> Reading</div>
+          <div data-feelings="restaurant" class="card-panel hoverable center-align grey darken-2 col s6" title="🤤"> Hungry</div>
+          <div data-feelings="shopping_mall" class="card-panel hoverable center-align grey darken-2 col s6" title="🛍️"> Shopping</div>
+          <div id="motivation" class="center-align"> <a class="waves-effect grey darken-2 btn modal-trigger" href="#modal1">Need Some Motivation</a>
+            <!-- instructions for the user to click within the modal for a new quote -->
+            <div id="modal1" class="modal grey darken-4" title="Click within the confines of the modal container for a new quote">
+              <div id="quote" class="modal-content" title="Click within the confines of the modal container for a new quote"></div>
                 <div class="modal-footer">
-              <!-- why is the href here #! ?  --> <a href="#!" class="modal-action modal-close waves-effect waves-green">Agree</a></div>
+              <!-- why is the href here #! ?  --> 
+              <a href="#!" class="modal-action modal-close waves-effect waves-green"> Agree </a></div>
           </div>
         </div>
         </div>
-      <!-- area for map display -->
-      <div id="main-content" class="col s9">
+     
+       <!-- area for map display -->
+       <div id="main-content" class="col s10">
         <div class="row">
           <div class="col s12 map-container">
             <div id="map"></div>
@@ -56,10 +63,9 @@
 
         <!-- area for api results in modal form -->
         <div id="cards-div" class="center-align row"></div>
-      </div>
     </div>
-    
-
+    </div>
+</body>
     <!-- footer section -->
     <footer class="page-footer grey darken-3">
       <div class="container">
@@ -74,8 +80,8 @@
               <li><h6>Dionne Noella Barretto</h6></li>
             </ul>
           </div>
-          <!--End div for contributors-->
-          <div class="col l6 s12">
+           <!--End div for contributors-->
+           <div class="col l6 s12">
             <!--begin div for email/contact section-->
             <!--email link here -->
           </div>
@@ -92,9 +98,12 @@
         </div>
       </div>
     </footer>
-    <!-- link to javascript -->
+
+<!-- Map JS -->
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAduSi1EvrfI6l250MnC45FoTrF1BSIhXo&callback=initMap&libraries=places"></script>
+       <!-- Compiled and minified JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- link to our javascript -->
     <script src="./js/script.js"></script>
-  </body>
+
 </html>

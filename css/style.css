@@ -1,5 +1,46 @@
+/* Universal Selectors */
+* {
+  box-sizing: border-box;
+}
+
+/* Element Selectors */
+
+body {
+  font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif ;
+  background-color: rgb(210, 220, 226);
+  background-size: cover;
+  cursor: default;
+}
+
+span {
+  font-size: medium !important;
+  margin: 0;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.9;
+  background: #6cf;
+}
+
+/* li {
+  display: inline-block;
+} */
+
+/* Id/Class Selectors */
+/* for the clickable elements cursor changes to a pointer */
+.hoverable, .modal-content:hover{
+  cursor: pointer;
+}
+
 #sidebar {
   height: 100vh;
+}
+/* shrunk the padding for the 'How Do you Feel'  */
+#sidebar h5{
+  margin: 0;
 }
 
 #map {
@@ -20,66 +61,110 @@
   border-radius: 15px;
   width: auto;
 }
-
-body {
-  font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif ;
-  background-color: rgb(210, 220, 226);
-  background-size: cover;
-  cursor: default;
+.card {
+  border-radius: 15px;
+  margin: 5px;
+  /* to ensure none of the cards height overshoot the row grid setting max height for the cards: https://www.youtube.com/watch?v=U9VF-4euyRo&t=207s */
+  height: max(180px);
 }
+/* ensures the images inside the cards are not stretched https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit  */
+.cover {
+  object-fit: cover;
+  width: 50px;
+  height: 100px;
+}
+
+.card:hover{
+  /* Upon hover, zoom into card gradually as per https://www.geeksforgeeks.org/how-to-zoom-an-image-on-mouse-hover-using-css/*/
+   z-index: 2;
+   transition: 0.5s all ease-in-out;
+   transform: scale(1.5);
+ }
+
 .contributorRow{
   background-color:  rgb(210, 220, 226);
-}
-
-footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  opacity: 0.9;
-  background: #6cf;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 #sidebar {
   color: white;
 }
 
-
 .row {
   margin-bottom: 0%;
 }
 
+.card-title{
+  font-weight:bolder;
+  margin-bottom: 0px !important;
+}
+
+.card-content{
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  padding-top: 5px !important;
+
+}
+
 #header {
   opacity: 0.9;
+  align-items: center;
 }
 
 #main-content {
   z-index: -1 !important;
 }
 
+.modal{
+  border-radius: 15px;
+  /* ensures the modal follows the user should they scroll */
+  position:fixed;
+  /* centers the modal
+  top:30%;
+  left:30%;
+  transform: translate(-30%,-30%); */
+}
+
 #modal1 {
   color: black;
   border-radius: 15px;
 }
-span {
-  font-size: medium !important;
-  margin: 0;
+.modal-content{
+  background: linear-gradient(-60deg,#b8b6b6,#807f7f,rgb(131, 131, 131));
+}
+
+
+.modal-footer {
+  background: linear-gradient(-60deg,rgb(131, 131, 131),#807f7f,#b8b6b6);
+}
+.modal-action{
+  padding: 3px;
+  font-size: 20px;
+  color: #000;
+}
+/* changes the color of "Agree" upon hover */
+.modal-action:hover, .brand-logo:hover, .nav-link:hover, .card-panel:hover, .btn:hover{
+color: rgb(8, 8, 155);
+}
+
+.qn:hover{
+  color: #fff !important;
+}
+
+#motivation{
+  border-radius: 25px;
 }
 
 #quote {
   opacity: 1 !important;
 }
-.card-title{
-  font-weight: bolder;
+
+.white-text {
+  padding-right:7px;
 }
 
-
-
+/* does this need to be removed ? -hiding it for now as I see no email follow up button in footer */
 /* emailUS button effects and settings */
-#emailUS {
+/* #emailUS {
   display: block;
   margin: auto;
   width: 120px;
@@ -94,10 +179,9 @@ span {
 margin:1px;
 font-size: medium;
 
-}
+} */
 
 /* styling for various screen sizes
-
 @media (max-width: 1200px) {
   .btn {
     font-size: 12px;

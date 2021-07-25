@@ -53,6 +53,14 @@ function initMap(type) {
       });
     },
     () => {
+      cardsDiv.innerHTML += `<div class="modal" id="modal> 
+      <div class="modal-header">
+        <div class="title" Error Alert</div> 
+        <button type="button" class="close">*times;</button>
+      </div>
+      <div class="modal-body"> Couldn't get geolocation. Please check your Browser Setting Locations to 'Allow' location tracking!> </div>
+      </div>`;
+
       //  This will log the error
       console.log("Couldn't get geolocation. Please check your Browser Setting Locations to 'Allow' location tracking!");
     }

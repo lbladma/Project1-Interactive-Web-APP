@@ -113,7 +113,14 @@ footer {
 
 .modal{
   border-radius: 15px;
+  /* ensures the modal follows the user should they scroll */
+  position:fixed;
+  /* centers the modal */
+  top:30%;
+  left:30%;
+  transform: translate(-30%,-30%);
 }
+
 #modal1 {
   color: black;
   border-radius: 15px;
@@ -151,9 +158,9 @@ color: rgb(8, 8, 155);
   padding-right:7px;
 }
 
-/* does this need to be removed ? - I see no email follow up button in footer */
+/* does this need to be removed ? -hiding it for now as I see no email follow up button in footer */
 /* emailUS button effects and settings */
-#emailUS {
+/* #emailUS {
   display: block;
   margin: auto;
   width: 120px;
@@ -168,7 +175,7 @@ color: rgb(8, 8, 155);
 margin:1px;
 font-size: medium;
 
-}
+} */
 
 /* styling for various screen sizes
 @media (max-width: 1200px) {

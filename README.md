@@ -50,6 +50,9 @@ The following "I'm Feeling" App allows users to search for places relevant to th
 ⏭️Add additional contact methods for each contributor
 ⏭️Allow users to see directions / distance to the place card they select
 ⏭️When location is blocked at a modal for error alert
+⏭️Present a spinning /loading  page indicator whilst the page takes a couple of minutes to render users lat long ( especially when using laptop browsers indoors) 
+⏭️Fix the card image z index to be above all revealed cards if hovered upon
+⏭️Revamp the site to be more modern day looking 
 
 ## Mock-Up (Screenshots & Responsive UI View)
 First Screen when web app loads: <img src= "./images/FirstScreen.png">

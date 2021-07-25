@@ -95,9 +95,9 @@ This project is graded based on the following criteria:
 ```
 ### Application Quality: 15%
 ```
-✔️ Application user experience is intuitive and easy to navigate.
-✔️ Application user interface style is clean and polished.
-✔️ Application is responsive.
+✔️ Application user experience is intuitive and easy to navigate. 👉Check
+✔️ Application user interface style is clean and polished. 👉Check
+✔️ Application is responsive. 👉Check
 ```
 ### Presentation 10%
 ```
@@ -107,5 +107,5 @@ This project is graded based on the following criteria:
 ```
 ### Collaboration 10%
 ```
-✔️ There are no major disparities in the number of GitHub contributions between group members.
+✔️ There are no major disparities in the number of GitHub contributions between group members. 👉Check
 ```

@@ -65,7 +65,7 @@ function createMarker(place) {
   // This will check if the data does not exist
   if (!place.geometry || !place.geometry.location) return;
   // This will create a marker
-  var marker = new google.maps.Marker({
+  new google.maps.Marker({
     map: map,
     position: place.geometry.location,
     animation: google.maps.Animation.DROP,

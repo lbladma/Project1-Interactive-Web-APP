@@ -72,7 +72,7 @@ var renderCards = function (results) {
   for (var i = 0; i < results.length && i < 8; i++) {
     if (results[i].photos) {
       cardsDiv.innerHTML += ` <div class="col l3 m4 s12">
-      <div class="card">
+      <div class="card medium">
       <div class="card-image waves-effect waves-block waves-light">
         <img class="activator"  width="180" height="180" src="${results[
           i

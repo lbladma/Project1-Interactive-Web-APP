@@ -27,6 +27,9 @@ body {
   background-size: cover;
   cursor: default;
 }
+.brand-logo{
+  margin-left: 2em;
+}
 
 footer {
   position: relative;

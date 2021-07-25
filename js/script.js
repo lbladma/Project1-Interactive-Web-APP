@@ -16,9 +16,9 @@ function initMap(type) {
       // This variable will get the user's location from local storage
       const myLocation = new google.maps.LatLng(localStorage.getItem('myLat'), localStorage.getItem('myLong'));
       // This will initiate map
-      map = new google.maps.Map(document.getElementById("map"), {
+       map = new google.maps.Map(document.getElementById("map"), {
         // center the map based on user location
-        center: myLocation,
+         center: myLocation,
         // This will zoom the map
         zoom: 10,
       });
@@ -104,9 +104,9 @@ var getMotivated = function () {
 
 // This will initiate the modal
 document.addEventListener("DOMContentLoaded", function () {
-  var options = { dismissible: true };
+  var options = { dismissible: true, };
   var elements = document.querySelectorAll(".modal");
-  // var instances = M.Modal.init(elements, options); removing variable storing this logic for the modal being built
+  //var instances = M.Modal.init(elements, options); //removing variable storing this logic for the modal being built
   M.Modal.init(elements, options);
 });
 

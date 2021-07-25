@@ -18,11 +18,11 @@ span {
 }
 
 footer {
-  position: relative;
+  position:relative;
   bottom: 0;
-  width: 100%;
-  opacity: 0.9;
-  background: #6cf;
+  width: 100%; 
+  background: linear-gradient(-60deg,#807f7f,rgb(163, 212, 240),rgb(107, 107, 107));
+  
 }
 
 /* li {
@@ -56,10 +56,15 @@ footer {
 .nav-link {
   padding-right: 1em;
 }
+.nav-wrapper a{
+  padding:0 .5em 0 1em;
+  margin: 0 1em 0 1em;
+}
 
 .card-panel {
   border-radius: 15px;
   width: auto;
+
 }
 .card {
   border-radius: 15px;
@@ -73,6 +78,7 @@ footer {
   width: 50px;
   height: 100px;
 }
+
 
 .card:hover{
   /* Upon hover, zoom into card gradually as per https://www.geeksforgeeks.org/how-to-zoom-an-image-on-mouse-hover-using-css/*/
@@ -108,6 +114,7 @@ footer {
 #header {
   opacity: 0.9;
   align-items: center;
+  background: linear-gradient(-60deg,#807f7f,rgb(163, 212, 240),rgb(107, 107, 107));
 }
 
 #main-content {
@@ -131,6 +138,12 @@ footer {
 .modal-content{
   background: linear-gradient(-60deg,#b8b6b6,#807f7f,rgb(131, 131, 131));
 }
+.contributor{
+  padding:0;
+}
+.contributorColor{
+  color:rgb(216, 234, 247);
+}
 
 
 .modal-footer {
@@ -142,7 +155,7 @@ footer {
   color: #000;
 }
 /* changes the color of "Agree" upon hover */
-.modal-action:hover, .brand-logo:hover, .nav-link:hover, .card-panel:hover, .btn:hover{
+.modal-action:hover, .brand-logo:hover, .nav-link:hover, .card-panel:hover, .btn:hover, .contributorColor:hover{
 color: rgb(8, 8, 155);
 }
 
@@ -162,35 +175,3 @@ color: rgb(8, 8, 155);
   padding-right:7px;
 }
 
-/* does this need to be removed ? -hiding it for now as I see no email follow up button in footer */
-/* emailUS button effects and settings */
-/* #emailUS {
-  display: block;
-  margin: auto;
-  width: 120px;
-  height: 30px;
-  background: url("./images/emailme.gif");
-}
-
-#emailUS:hover {
-  background-position: 0 40px;
-}
-.btn{
-margin:1px;
-font-size: medium;
-
-} */
-
-/* styling for various screen sizes
-@media (max-width: 1200px) {
-  .btn {
-    font-size: 1rem;
-    margin: 16px 0px 0px 0px;
-    padding: 10px 15px;
-  }
-}
-@media (max-width: 500px) {
-  .btn {
-    font-size: 0.8rem;
-  }
-} */

@@ -6,14 +6,15 @@ var service;
 // This function will get the info from google api and gets current user's location and initiate the map and set to the current user's location: logic referenced: https://developers.google.com/maps/documentation/javascript/places
 function initMap(type) {
   // This will get the current user's location
+  // navigator.geolocation.watchPosition( - was testing app by switching locations
   navigator.geolocation.getCurrentPosition(
-    // This async function will use the user's coordinates
+    // This async function will use the user's coordinates (async code is used when execution may take a while to proceed with execution without waiting especially when using laptops as opposed to mobile phones outdoors)
     async ({ coords: { latitude: lat, longitude: lon } }) => {
-      // This variable will get the user's location '
-      const myLocation = new google.maps.LatLng(lat, lon);
       // storing lat long
       localStorage.setItem('myLat', lat);
       localStorage.setItem('myLong', lon);
+      // This variable will get the user's location from local storage
+      const myLocation = new google.maps.LatLng(localStorage.getItem('myLat'), localStorage.getItem('myLong'));
       // This will initiate map
       map = new google.maps.Map(document.getElementById("map"), {
         // center the map based on user location
@@ -24,7 +25,7 @@ function initMap(type) {
 
       // The request object
       const request = {
-        //  This will set the user's location'
+        //  This will set the user's location as gathers above
         location: myLocation,
         // This will set a perimeter of the search  (increased radius of search results overall to circumvent need for if condition for no results rendering)
         radius: "15000",
@@ -58,12 +59,13 @@ function initMap(type) {
   );
 }
 
+
 // this will create marker for the places
 function createMarker(place) {
   // This will check if the data does not exist
   if (!place.geometry || !place.geometry.location) return;
   // This will create a marker
-  new google.maps.Marker({
+  var marker = new google.maps.Marker({
     map: map,
     position: place.geometry.location,
     animation: google.maps.Animation.DROP,
@@ -123,8 +125,3 @@ var buttonClickHandler = function (event) {
 //  Those are an event listeners 
 document.getElementById("sidebar").addEventListener("click", buttonClickHandler);
 document.getElementById("motivation").addEventListener("click", getMotivated);
-
-// loads init map once allow is clicked
-window.addEventListener('load', (event) => {
-  initMap();
-})

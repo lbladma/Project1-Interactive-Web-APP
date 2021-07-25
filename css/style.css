@@ -30,8 +30,8 @@ footer {
 } */
 
 /* Id/Class Selectors */
-/* for the hoverable elements cursor changes to a pointer */
-.hoverable{
+/* for the clickable elements cursor changes to a pointer */
+.hoverable, .modal-content:hover{
   cursor: pointer;
 }
 
@@ -64,6 +64,8 @@ footer {
 .card {
   border-radius: 15px;
   margin: 5px;
+  /* to ensure none of the cards height overshoot the row grid setting max height for the cards: https://www.youtube.com/watch?v=U9VF-4euyRo&t=207s */
+  height: max(180px);
 }
 /* ensures the images inside the cards are not stretched https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit  */
 .cover {
@@ -93,13 +95,14 @@ footer {
 
 .card-title{
   font-weight:bolder;
-  font-size: auto;
   margin-bottom: 0px !important;
 }
 
 .card-content{
   padding-right: 0px !important;
   padding-left: 0px !important;
+  padding-top: 5px !important;
+
 }
 
 #header {
@@ -115,10 +118,10 @@ footer {
   border-radius: 15px;
   /* ensures the modal follows the user should they scroll */
   position:fixed;
-  /* centers the modal */
+  /* centers the modal
   top:30%;
   left:30%;
-  transform: translate(-30%,-30%);
+  transform: translate(-30%,-30%); */
 }
 
 #modal1 {
@@ -128,6 +131,7 @@ footer {
 .modal-content{
   background: linear-gradient(-60deg,#b8b6b6,#807f7f,rgb(131, 131, 131));
 }
+
 
 .modal-footer {
   background: linear-gradient(-60deg,rgb(131, 131, 131),#807f7f,#b8b6b6);

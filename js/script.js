@@ -10,7 +10,7 @@ function initMap(type) {
   navigator.geolocation.getCurrentPosition(
     // This async function will use the user's coordinates (async code is used when execution may take a while to proceed with execution without waiting especially when using laptops as opposed to mobile phones outdoors)
     async ({ coords: { latitude: lat, longitude: lon } }) => {
-      // storing lat long
+      // storing lat long in local storage for use later
       localStorage.setItem('myLat', lat);
       localStorage.setItem('myLong', lon);
       // This variable will get the user's location from local storage
@@ -28,7 +28,7 @@ function initMap(type) {
         //  This will set the user's location as gathers above
         location: myLocation,
         // This will set a perimeter of the search  (increased radius of search results overall to circumvent need for if condition for no results rendering)
-        radius: "15000",
+        radius: "20000",
         // This will set the type of search
         type: type,
       };
@@ -53,15 +53,7 @@ function initMap(type) {
       });
     },
     () => {
-      cardsDiv.innerHTML += `<div class="modal" id="modal> 
-      <div class="modal-header">
-        <div class="title" Error Alert</div> 
-        <button type="button" class="close">*times;</button>
-      </div>
-      <div class="modal-body"> Couldn't get geolocation. Please check your Browser Setting Locations to 'Allow' location tracking!> </div>
-      </div>`;
-
-      //  This will log the error
+          //  This will log the error
       console.log("Couldn't get geolocation. Please check your Browser Setting Locations to 'Allow' location tracking!");
     }
   );
@@ -106,7 +98,7 @@ var getMotivated = function () {
     })
     .then(function (data) {
       // This will inject quote content, author and dateModified (https://quotable.io/random) in the modal with inline styling 
-    document.getElementById("quote").innerHTML = `<h3><b> ${data.content}</h3><h5><em> -${data.author}</em></h5><h6>${data.dateModified}</b></h6>`;
+    document.getElementById("quote").innerHTML = `<h3><b> "${data.content}"</h3><h5><em> -${data.author}</em></h5><h6>${data.dateModified}</b></h6>`;
     });
 };
 

@@ -25,6 +25,10 @@ footer {
   background: #6cf;
 }
 
+/* li {
+  display: inline-block;
+} */
+
 /* Id/Class Selectors */
 /* for the hoverable elements cursor changes to a pointer */
 .hoverable{
@@ -67,6 +71,13 @@ footer {
   width: 50px;
   height: 100px;
 }
+
+.card:hover{
+  /* Upon hover, zoom into card gradually as per https://www.geeksforgeeks.org/how-to-zoom-an-image-on-mouse-hover-using-css/*/
+   z-index: 2;
+   transition: 0.5s all ease-in-out;
+   transform: scale(1.5);
+ }
 
 .contributorRow{
   background-color:  rgb(210, 220, 226);

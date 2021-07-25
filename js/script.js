@@ -53,7 +53,7 @@ function initMap(type) {
     },
     () => {
       //  This will log the error
-      console.log("Couldn't get position from browser location. Please check your Browser Setting Locations to 'Allow' location tracking!");
+      console.log("Couldn't get geolocation. Please check your Browser Setting Locations to 'Allow' location tracking!");
     }
   );
 }
@@ -118,6 +118,7 @@ var buttonClickHandler = function (event) {
     initMap(type);
   }
 };
+
 
 //  Those are an event listeners 
 document.getElementById("sidebar").addEventListener("click", buttonClickHandler);

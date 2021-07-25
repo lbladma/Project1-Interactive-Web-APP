@@ -22,20 +22,16 @@ This Repo is for the Project 1 Interactive Web Application. The main purpose of 
 </table>
 
 ## Project Resources:
-👉[Project Live URL](https://lbladma.github.io/Project1-Interactive-Web-APP/)
-👉[Project Plan/Proposal](https://docs.google.com/document/d/1UkL3EaRt6hdjlgQpQYlR67exUwjlNt862YEAd5OwlI8/edit#)
-👉[Project Wire frame/Mockup](https://drive.google.com/file/d/1aUWXiPsHpy4Mmw-mldBUD_R_U6LJDZkk/view?usp=sharing)
-👉[Project Presentation Template](https://docs.google.com/presentation/d/1tGplDJAv14izYNg7Sh26AQ1ouZhdK0s7q0aiLNXR76c/edit?usp=sharing)
-
+👉[Project Live URL](https://lbladma.github.io/Project1-Interactive-Web-APP/)<br/>
+👉[Project Plan/Proposal](https://docs.google.com/document/d/1UkL3EaRt6hdjlgQpQYlR67exUwjlNt862YEAd5OwlI8/edit#)<br/>
+👉[Project Wire frame/Mockup](https://drive.google.com/file/d/1aUWXiPsHpy4Mmw-mldBUD_R_U6LJDZkk/view?usp=sharing) <br/>
+👉[Project Presentation Template](https://docs.google.com/presentation/d/1tGplDJAv14izYNg7Sh26AQ1ouZhdK0s7q0aiLNXR76c/edit?usp=sharing)<br/>
 
 
 ## User Story
 ```
-To be Updated...
-AS A/AN _______
-I WANT to ________
-SO THAT I can __________
-
+AS humans we often WANT to express our feelings and act on then SO as to be able to action and channel those feelings and satisfy our needs and desires.
+The following "I'm Feeling" App allows users to search for places relevant to their mood/feeling. 
 ```
 
 ## Mock-Up
@@ -59,12 +55,12 @@ As a group we were required to use everything we’ve learnt over the past six u
 
 ## Presentation Requirements
 ```
-🎤 **Elevator pitch**: a one minute description of your application
-📖 **Concept**: What is your user story? What was your motivation for development?
-♻️ **Process**: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
-💻 **Demo**: Show your stuff!
-⏭️ Directions for **Future Development**
-🔗 **Links** to the deployed application and the GitHub repository
+Elevator pitch 🎤 : a one minute description of your application
+Concept 📖: What is your user story? What was your motivation for development?
+Process ♻️: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+Demo 💻: Show your stuff!
+Directions for Future ⏭️ Development
+Links 🔗: to the deployed application and the GitHub repository
 ```
 ## Grading Requirements
 

@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
   <nav id="header">
     <!-- navigation bar up top -->
     <div class="nav-wrapper "> 
@@ -28,59 +29,45 @@
       <a href="./index.html" class="right nav-link">Home</a>
     </div>
   </nav>
-  <!-- A quick link to the feeling's section to the left -->
+
   <div class="row">
     <!-- shrunk this to s2 instead of s3 -->
     <div id="sidebar" class="col s3">
       <div class="qn card-panel lighten-2 center-align grey darken-2">
         <h5 title="Click on one of the feelings from below to be shown recommended places">How Do You Feel?</h5>
       </div>
+
       <div class="feelings">
-        <!-- added a hoverable title to match the emoji with the text expression using https://emojipedia.org/, 
-          data feelings is being referenced from the api field of type : 
-          https://developers.google.com/maps/documentation/places/web-service/supported_types, 
-          materialize colors - https://materializecss.com/color.html  -->
-        <div data-feelings="cafe" class="card-panel hoverable center-align grey darken-2 col s12" title="☕"> Like a Latte
-        </div>
-        <div data-feelings="park" class="card-panel hoverable center-align grey darken-2 col s12" title="🚶"> Like
-          Walking </div>
-        <div data-feelings="hospital" class="card-panel hoverable center-align grey darken-2 col s12" title="🤒"> Unwell
-        </div>
-        <div data-feelings="tourist_attraction" class="card-panel hoverable center-align grey darken-2 lighten-1 col s12"
-          title="🎟️"> Touristy</div>
-        <div data-feelings="amusement_park" class="card-panel hoverable center-align grey darken-2 lighten-1 col s12"
-          title="🎢"> Adventurous</div>
+
+        <!-- added a hoverable title to match the emoji with the text expression using https://emojipedia.org/, data feelings is being referenced from the api field of type : https://developers.google.com/maps/documentation/places/web-service/supported_types, materialize colors - https://materializecss.com/color.html  -->
+        <div data-feelings="cafe" class="card-panel hoverable center-align grey darken-2 col s12" title="☕"> Like a Latte</div>
+        <div data-feelings="park" class="card-panel hoverable center-align grey darken-2 col s12" title="🚶"> Like Walking </div>
+        <div data-feelings="hospital" class="card-panel hoverable center-align grey darken-2 col s12" title="🤒"> Unwell</div>
+        <div data-feelings="tourist_attraction" class="card-panel hoverable center-align grey darken-2 lighten-1 col s12" title="🎟️"> Touristy</div>
+        <div data-feelings="amusement_park" class="card-panel hoverable center-align grey darken-2 lighten-1 col s12" title="🎢"> Adventurous</div>
         <div data-feelings="gym" class="card-panel hoverable center-align grey darken-2 col s12" title="🏋️"> Fit</div>
-        <div data-feelings="night_club" class="card-panel hoverable center-align grey darken-2 accent-4 col s12"
-          title="👙"> Pub</div>
-        <div data-feelings="spa" class="card-panel hoverable center-align grey darken-2 col s12" title="😟"> Anxious
-        </div>
-        <div data-feelings="bar" class="card-panel hoverable center-align grey darken-2 col s12" title="🥂"> Thirsty
-        </div>
-        <div data-feelings="library" class="card-panel hoverable center-align grey darken-2 col s12" title="📚"> Reading
-        </div>
-        <div data-feelings="restaurant" class="card-panel hoverable center-align grey darken-2 col s12" title="🤤">
-          Hungry</div>
-        <div data-feelings="shopping_mall" class="card-panel hoverable center-align grey darken-2 col s12" title="🛍️">
-          Shopping</div>
+        <div data-feelings="night_club" class="card-panel hoverable center-align grey darken-2 accent-4 col s12" title="👙"> Pub</div>
+        <div data-feelings="spa" class="card-panel hoverable center-align grey darken-2 col s12" title="😟"> Anxious</div>
+        <div data-feelings="bar" class="card-panel hoverable center-align grey darken-2 col s12" title="🥂"> Thirsty</div>
+        <div data-feelings="library" class="card-panel hoverable center-align grey darken-2 col s12" title="📚"> Reading</div>
+        <div data-feelings="restaurant" class="card-panel hoverable center-align grey darken-2 col s12" title="🤤">Hungry</div>
+        <div data-feelings="shopping_mall" class="card-panel hoverable center-align grey darken-2 col s12" title="🛍️">Shopping</div>
       </div>
+
       <div id="motivation" class="center-align"> 
-        <a class="waves-effect grey darken-2 btn modal-trigger"
-          href="#modal1">Motivate
-          Me</a>
+        <a class="waves-effect grey darken-2 btn modal-trigger" href="#modal1">Motivate Me</a>
         <!-- instructions for the user to click within the modal for a new quote -->
         <div id="modal1" class="modal grey darken-4"
           title="Click within the confines of the modal container for a new quote">
-          <div id="quote" class="modal-content"
-            title="Click within the confines of the modal container for a new quote"></div>
+          <div id="quote" class="modal-content" title="Click within the confines of the modal container for a new quote"></div>
           <div class="modal-footer">
             <!-- why is the href here #! ?  -->
             <a href="#!" class="modal-action modal-close waves-effect waves-green"> 🔋 I'm Motivated and Recharged! ⚡ </a>
           </div>
         </div>
       </div>
-    </div>
-
+    </div><!--end div for sidebar-->
+    
     <!-- area for map display -->
     <div id="main-content" class="col s9">
       <div class="row">
@@ -88,12 +75,12 @@
           <div id="map"></div>
         </div>
       </div>
-
       <!-- area for api results in modal form -->
       <div id="cards-div" class="center-align row"></div>
     </div>
   </div>
 </body>
+
 <!-- footer section -->
 <footer class="page-footer grey darken-3">
   <div class="container">
@@ -115,17 +102,9 @@
               <h6>Dionne Noella Barretto</h6>
             </a></li>
         </ul>
-      </div>
-      <!--End div for contributors-->
-      <div class="col l6 s12">
-        <!--begin div for email/contact section-->
-        <!--email link here -->
-      </div>
-      <!--End div for email/contact section-->
-    </div>
-    <!--end div for row-->
-  </div>
-  <!--end div for container-->
+      </div><!--End div for contributors-->
+    </div><!--end div for row-->
+  </div><!--end div for container-->
   <div class="footer-copyright">
     <!--beginning div for copyright/marquee section of footer-->
     <div class="container">

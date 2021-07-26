@@ -31,6 +31,7 @@ This repository is for group 7's Project1 - Interactive Web Application: I'm Fee
 
 ## User Story
 ```
+
 AS humans (for example: someone new to a city) we often 
 WANT to socialize and easily find places depending on our mood
 SO as to be able to action and channel those feelings and satisfy our needs and desires by visiting corresponding nearby places and feel like they belong.

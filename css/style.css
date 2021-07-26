@@ -65,7 +65,7 @@ footer {
   border-radius: 15px;
   margin: 5px;
   /* to ensure none of the cards height overshoot the row grid setting max height for the cards: https://www.youtube.com/watch?v=U9VF-4euyRo&t=207s */
-  max-height: 180px;/* change the syntax for the max-height from height: max(180px);*/
+  height: max(180px);/* change the syntax for the max-height from height: max(180px);*/
 }
 
 /* ensures the images inside the cards are not stretched https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit  */

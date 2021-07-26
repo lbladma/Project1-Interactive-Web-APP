@@ -146,7 +146,9 @@ footer {
 .contributorColor{
   color:rgb(216, 234, 247);
 }
-/* changes the color of "Agree" upon hover */
+
+/* changes the color of text upon hover */
+
 .modal-action:hover, .brand-logo:hover, .nav-link:hover, .card-panel:hover, .btn:hover, .contributorColor:hover{
 color: rgb(8, 8, 155);
 }

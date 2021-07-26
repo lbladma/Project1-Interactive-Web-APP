@@ -24,11 +24,6 @@ footer {
   background: linear-gradient(-60deg,#807f7f,rgb(163, 212, 240),rgb(107, 107, 107));
   
 }
-
-/* li {
-  display: inline-block;
-} */
-
 /* Id/Class Selectors */
 /* for the clickable elements cursor changes to a pointer */
 .hoverable, .modal-content:hover{
@@ -70,15 +65,15 @@ footer {
   border-radius: 15px;
   margin: 5px;
   /* to ensure none of the cards height overshoot the row grid setting max height for the cards: https://www.youtube.com/watch?v=U9VF-4euyRo&t=207s */
-  height: max(180px);
+  max-height: 180px;/* change the syntax for the max-height from height: max(180px);*/
 }
+
 /* ensures the images inside the cards are not stretched https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit  */
 .cover {
   object-fit: cover;
   width: 50px;
   height: 100px;
 }
-
 
 .card:hover{
   /* Upon hover, zoom into card gradually as per https://www.geeksforgeeks.org/how-to-zoom-an-image-on-mouse-hover-using-css/*/
@@ -123,28 +118,17 @@ footer {
 
 .modal{
   border-radius: 15px;
-  /* ensures the modal follows the user should they scroll */
   position:fixed;
-  /* centers the modal
-  top:30%;
-  left:30%;
-  transform: translate(-30%,-30%); */
 }
 
 #modal1 {
   color: black;
   border-radius: 15px;
 }
+
 .modal-content{
   background: linear-gradient(-60deg,#b8b6b6,#807f7f,rgb(131, 131, 131));
 }
-.contributor{
-  padding:0;
-}
-.contributorColor{
-  color:rgb(216, 234, 247);
-}
-
 
 .modal-footer {
   background: linear-gradient(-60deg,rgb(131, 131, 131),#807f7f,#b8b6b6);
@@ -153,6 +137,14 @@ footer {
   padding: 3px;
   font-size: 20px;
   color: #000;
+}
+
+.contributor{
+  padding:0;
+}
+
+.contributorColor{
+  color:rgb(216, 234, 247);
 }
 /* changes the color of "Agree" upon hover */
 .modal-action:hover, .brand-logo:hover, .nav-link:hover, .card-panel:hover, .btn:hover, .contributorColor:hover{

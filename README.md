@@ -40,48 +40,58 @@ The following "I'm Feeling" App allows users to search for places relevant to th
 ```
 
 ## Project Future Enhancements
-⏭️More feelings
-⏭️Concatenate feeling results using Places API types property (like for travel - include bus, airways, trains etc to yield a compounded result) 
-⏭️Alternative search methods(zip-code, city name, text-based search)
-⏭️Locally store - recently clicked on Cards (Places) and/or searched feelings 
-⏭️Dynamic ability for user to increase radius of search, if results are not great
-⏭️Filter results (open now, distance, rating)
-⏭️Responsiveness of the UI (especially on the smallest screens )
-⏭️Contributor page (Email project team feedback)
-⏭️Add additional contact methods for each contributor
-⏭️Allow users to see directions / distance to the place card they select
-⏭️When location is blocked at a modal for error alert
-⏭️Present a spinning /loading  page indicator whilst the page takes a couple of minutes to render users lat long ( especially when using laptop browsers indoors) 
-⏭️Fix the card image z index to be above all revealed cards if hovered upon
-⏭️Revamp the site to be more modern day looking 
+⏭️More feelings <br/>
+⏭️Concatenate feeling results using Places API types property (like for travel - include bus, airways, trains etc to yield a compounded result) <br/>
+⏭️Alternative search methods(zip-code, city name, text-based search) <br/>
+⏭️Locally store - recently clicked on Cards (Places) and/or searched feelings  <br/>
+⏭️Dynamic ability for user to increase radius of search, if results are not great <br/>
+⏭️Filter results (open now, distance, rating) <br/>
+⏭️Responsiveness of the UI (especially on the smallest screens ) <br/>
+⏭️Contributor page (Email project team feedback) <br/>
+⏭️Add additional contact methods for each contributor <br/>
+⏭️Allow users to see directions / distance to the place card they select <br/>
+⏭️When location is blocked at a modal for error alert <br/>
+⏭️Present a spinning /loading  page indicator whilst the page takes a couple of minutes to render users lat long ( especially when using laptop browsers indoors) <br/> 
+⏭️Fix the card image z index to be above all revealed cards if hovered upon <br/>
+⏭️Revamp the site to be more modern day looking <br/>
 
 ## Mock-Up (Screenshots & Responsive UI View)
-First Screen when web app loads: <img src= "./images/FirstScreen.png">
-If the User Blocks the location in the browser: <img src= "./images/BlockLocationError.png">
-When location of browser is allowed: <img src= "./images/LatLongStoredInBrowserLocalStorage.png">
-Local Browser stores the Browser Location fetched: <img src= "./images/SecondScreen_NoErrors.png">
-Clicking on a Feeling renders nearby Places in card form: <img src= "./images/LatteSearchResults.png">
-Hovering over the card zooms in on the card,clicking a place unveils the rating & address of the place: <img src= "./images/CardHoverZoomsIn,CardClickDetails.png">
-All hoverable clickable elements turn blue (as opposed to white-text):<img src= "./images/ClickableIconsTurnBlue.png">
-Motivate Me renders a modal with a quote by an author and the last day the quote was modified (notice the blurred out background): <img src= "./images/MotivationAPIMODAL.png">
-Mobile/Tablet View changes the number of card columns:<img src= "./images/TabletScreen.png"><img src= "./images/MobileScreen.png">
-Footer gradient with marquee: <img src= "./images/FooterWithMarqueeCopyRights.png">
-Contributors Page:<img src= "./images/Contributors.png"> 
+First Screen when web app loads: <img src= "./images/FirstScreen.png"> <br/>
+If the User Blocks the location in the browser: <img src= "./images/BlockLocationError.png"> <br/>
+When location of browser is allowed: <img src= "./images/LatLongStoredInBrowserLocalStorage.png"> <br/>
+Local Browser stores the Browser Location fetched: <img src= "./images/SecondScreen_NoErrors.png"> <br/>
+Clicking on a Feeling renders nearby Places in card form: <img src= "./images/LatteSearchResults.png"> <br/>
+Hovering over the card zooms in on the card,clicking a place unveils the rating & address of the place: <img src= "./images/CardHoverZoomsIn,CardClickDetails.png"> <br/>
+All hoverable clickable elements turn blue (as opposed to white-text):<img src= "./images/ClickableIconsTurnBlue.png"> <br/>
+Motivate Me renders a modal with a quote by an author and the last day the quote was modified (notice the blurred out background): <img src= "./images/MotivationAPIMODAL.png"> <br/>
+Mobile/Tablet View changes the number of card columns:<img src= "./images/TabletScreen.png"><img src= "./images/MobileScreen.png"> <br/>
+Footer gradient with marquee: <img src= "./images/FooterWithMarqueeCopyRights.png"> <br/>
+Contributors Page:<img src= "./images/Contributors.png">  <br/>
 
 ## Project Requirements
 
 As a group we were required to use everything we’ve learnt over the past six units to create a real-world front-end application that we’ll be able to showcase to potential employers. The project must fulfil the following requirements:
 ```
-✔️ Use a CSS framework other than Bootstrap. 👉 Materialize + CSS
-✔️ Be deployed to GitHub Pages. 👉See Project Resources section up top
-✔️ Be interactive (i.e., accept and respond to user input). 👉User can click feeling buttons
-✔️ Use at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources). 👉We've used Maps - Places + GeoLocation and Motivation API's
-✔️ Does not use alerts, confirms, or prompts (use modals). 👉Used Modals
-✔️ Use client-side storage to store persistent data. 👉Used to store browser lat and long
-✔️ Be responsive. 👉Used Materialize for responsiveness on small, medium, large screens
-✔️ Have a polished UI. 👉Done
-✔️ Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.). 👉 Done
-✔️ Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application). 👉Done
+✔️ Use a CSS framework other than Bootstrap
+  👉 Materialize + CSS
+✔️ Be deployed to GitHub Pages
+  👉See Project Resources section up top
+✔️ Be interactive (i.e., accept and respond to user input)
+  👉User can click feeling buttons
+✔️ Use at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources)
+  👉We've used Maps - Places + GeoLocation and Motivation API's
+✔️ Does not use alerts, confirms, or prompts (use modals)
+  👉Used Modals
+✔️ Use client-side storage to store persistent data
+  👉Used to store browser lat and long
+✔️ Be responsive
+  👉Used Materialize for responsiveness on small, medium, large screens
+✔️ Have a polished UI
+  👉Done
+✔️ Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.)
+  👉 Done
+✔️ Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application)
+  👉Done
 ```
 
 ## Presentation Requirements
